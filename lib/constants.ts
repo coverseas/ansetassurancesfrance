@@ -1,12 +1,12 @@
 /**
  * Constantes globales du site ANSET ASSURANCES France
- * Centralisation des informations légales, contacts, et configuration
+ * Une seule source de vérité pour le contenu et la conformité légale.
  */
 
 export const COMPANY = {
   legalName: "COVERSEAS",
   legalForm: "SASU - Société par actions simplifiée à associé unique",
-  capital: "1 000 euros", // à confirmer
+  capital: "1 000 euros",
   siren: "993355486",
   rcs: "PARIS 993355486",
   vatNumber: "FR à compléter",
@@ -77,73 +77,257 @@ export const URLS = {
   souscriptionSanteAnimale: "https://souscription.ansetassurances.com/sante-animale",
   souscriptionMoto: "https://souscription.ansetassurances.com/moto",
   souscriptionMotoPro: "https://souscription.ansetassurances.com/moto-pro",
+  souscriptionVoyage: "https://souscription.ansetassurances.com/voyage",
   espaceClient: "https://espace.ansetassurances.com",
+} as const;
+
+export const TRUSTPILOT = {
+  rating: "4,7",
+  count: 847,
+  name: "Trustpilot",
 } as const;
 
 export const PRODUCTS = [
   {
     slug: "sante-chien-chat",
-    universe: "famille" as const,
+    universe: "famille",
     name: "Santé chien & chat",
     shortName: "Santé animale",
     category: "MA FAMILLE",
-    color: "corail" as const,
-    icon: "paw",
-    porteur: "Groupama",
+    color: "corail",
+    icon: "cat",
+    porteurMention: "Risque porté par Groupama",
     audience: "Particuliers",
     priceFrom: 12,
     priceCurrency: "€",
     pricePeriod: "/mois",
-    description:
-      "Consultations, vaccins, chirurgie, hospitalisation. Remboursements rapides sans paperasse.",
-    available: true,
-    launchDate: "Disponible",
+    description: "Pour votre compagnon, sans paperasse.",
+    features: [
+      "Consultations, vaccins, chirurgie",
+      "Souscription 100% en ligne",
+      "Remboursement en 48 heures",
+    ],
+    onlineSubscription: true,
   },
   {
     slug: "moto-cyclo",
-    universe: "biens" as const,
+    universe: "biens",
     name: "Moto, cyclo, scooter",
     shortName: "2-roues",
     category: "MES BIENS",
-    color: "moutarde" as const,
+    color: "moutarde",
     icon: "motorbike",
-    porteur: "Mutuelle du Motard",
+    porteurMention: "Risque porté par la Mutuelle du Motard",
     audience: "Particuliers & pros",
     priceFrom: 18,
     priceCurrency: "€",
     pricePeriod: "/mois",
-    description:
-      "Formules tous risques, RC, vol, équipements. Pour usage perso ou pour les livreurs et coursiers pros.",
-    available: true,
-    launchDate: "Disponible",
+    description: "Particuliers ou pros, on s'occupe de tout.",
+    features: [
+      "Tous risques, RC, vol & équipement",
+      "Avec conseiller dédié",
+      "Spécial livreurs & coursiers",
+    ],
+    onlineSubscription: false,
+  },
+  {
+    slug: "voyage",
+    universe: "voyage",
+    name: "Voyage & rapatriement",
+    shortName: "Voyage",
+    category: "MES VOYAGES",
+    color: "menthe",
+    icon: "world",
+    porteurMention: "Risque porté par notre partenaire voyage spécialiste",
+    audience: "Particuliers",
+    priceFrom: 12,
+    priceCurrency: "€",
+    pricePeriod: "/voyage",
+    description: "L'esprit léger, partout dans le monde.",
+    features: [
+      "Annulation, bagages, médical",
+      "Souscription 100% en ligne",
+      "Module rapatriement très bientôt",
+    ],
+    onlineSubscription: true,
   },
 ] as const;
 
 export const ROADMAP = [
-  { slug: "auto", name: "Assurance auto", icon: "car", universe: "biens" as const, status: "Automne 2026" },
-  { slug: "habitation", name: "Habitation", icon: "home", universe: "biens" as const, status: "Début 2027" },
+  {
+    slug: "rapatriement",
+    name: "Assistance rapatriement",
+    icon: "shield-plus",
+    universe: "voyage" as const,
+    status: "Très bientôt",
+  },
+  {
+    slug: "auto",
+    name: "Assurance auto",
+    icon: "car",
+    universe: "biens" as const,
+    status: "Automne 2026",
+  },
+  {
+    slug: "habitation",
+    name: "Habitation",
+    icon: "home",
+    universe: "biens" as const,
+    status: "Début 2027",
+  },
+] as const;
+
+export const STATS = [
+  {
+    number: "25",
+    suffix: "+",
+    suffixColor: "corail" as const,
+    label: "Années d'expertise",
+    sub: "en outre-mer et métropole",
+  },
+  {
+    number: "4",
+    suffix: "",
+    suffixColor: "corail" as const,
+    label: "Territoires",
+    sub: "Polynésie Fr., NC, Réunion, France",
+  },
+  {
+    number: "6",
+    suffix: "j/7",
+    suffixColor: "corail" as const,
+    label: "Conseillers humains",
+    sub: "Experts de l'outre-mer",
+  },
+  {
+    number: "24",
+    suffix: "/24",
+    suffixColor: "corail" as const,
+    label: "Ana, agente IA",
+    sub: "Pour ne jamais vous laisser seul",
+  },
+] as const;
+
+export const TEAM_MEMBERS = [
+  { name: "Marie", role: "Conseillère senior" },
+  { name: "Jean-Pierre", role: "Conseiller particuliers" },
+  { name: "Vaiana", role: "Conseillère outre-mer" },
+  { name: "Patrick", role: "Conseiller moto pro" },
+  { name: "Léa", role: "Conseillère voyage" },
+] as const;
+
+export const HOWTO_STEPS = [
+  {
+    num: "01",
+    color: "corail" as const,
+    title: "Vous nous parlez de vous",
+    description: "Quelques questions sur ce que vous voulez assurer. Pas de jargon, pas d'inutile.",
+    meta: "2 minutes en ligne",
+    icon: "clock",
+  },
+  {
+    num: "02",
+    color: "moutarde" as const,
+    title: "On vous fait une offre claire",
+    description: "Votre tarif, vos garanties, vos exclusions. Vous signez en ligne ou avec un conseiller.",
+    meta: "Tarif transparent",
+    icon: "file-text",
+  },
+  {
+    num: "03",
+    color: "menthe" as const,
+    title: "On reste à vos côtés",
+    description: "Ana 24h/24, conseillers 6j/7. Sinistre, attestation, modification — jamais seul.",
+    meta: "À tout moment",
+    icon: "heart-handshake",
+  },
+] as const;
+
+export const SERVICE_PILLARS = {
+  human: {
+    tag: "Conseillers chaleureux",
+    title: "Des conseillers qui",
+    accent: "connaissent l'outre-mer",
+    description: "Pas un call center anonyme. Des conseillers qui parlent vos codes, comprennent votre histoire, vous reconnaissent quand vous rappelez.",
+    features: ["9h-19h, samedi inclus", "Conseiller dédié"],
+  },
+  ai: {
+    tag: "Ana · Agente IA",
+    title: "Une IA",
+    accent: "disponible jour et nuit",
+    description: "Pour vos questions courantes, attestations, démarches simples — à toute heure du jour ou de la nuit, week-ends et jours fériés inclus.",
+    features: ["24h/24, 7j/7", "Réponse instantanée"],
+    sample: {
+      name: "Ana · ANSET",
+      status: "En ligne · Répond en quelques secondes",
+      messages: [
+        { from: "bot", text: "Bonjour Sandrine ☺ En quoi puis-je vous aider ?" },
+        { from: "user", text: "J'ai besoin de l'attestation pour ma moto" },
+        { from: "bot", text: "Bien sûr. C'est pour quel usage ?" },
+        { from: "user", text: "Pour mon employeur" },
+        { from: "bot", text: "Voici votre attestation. Envoyée aussi sur votre email 📎" },
+      ],
+      quickReplies: ["Merci !", "Autre question"],
+    },
+  },
+} as const;
+
+export const TESTIMONIALS = [
+  {
+    quote: "Originaire de Polynésie Française, je connaissais ANSET depuis longtemps. Tellement heureuse qu'ils arrivent en métropole. La conseillère qui m'a accompagnée comprenait mon histoire, ça change tout.",
+    name: "Vaiana T.",
+    location: "Nanterre (92)",
+    avatarTone: "medium" as const,
+    featured: true,
+  },
+  {
+    quote: "Devis fait en 3 minutes, conseillère super sympa. Mon Léo est bien couvert et j'ai économisé 18€/mois.",
+    name: "Sandrine R.",
+    location: "Saint-Denis (93)",
+    avatarTone: "light" as const,
+    featured: false,
+  },
+  {
+    quote: "Voyage à Maurice souscrit en 5 min depuis mon canapé. Bagage perdu remboursé sans batailler.",
+    name: "Maeva K.",
+    location: "Bobigny (93)",
+    avatarTone: "warm" as const,
+    featured: false,
+  },
 ] as const;
 
 export const HISTORY_MILESTONES = [
-  { year: "2000", location: "Tahiti", event: "Création d'ANSET en Polynésie française", accent: "ciel" as const },
-  { year: "2010", location: "La Réunion", event: "Implantation BEACOM dans l'océan Indien", accent: "corail" as const },
-  { year: "2024", location: "Nouméa", event: "Ouverture en Nouvelle-Calédonie", accent: "menthe" as const },
-  { year: "2026", location: "Métropole", event: "Lancement d'ANSET ASSURANCES France", accent: "moutarde" as const },
-] as const;
-
-export const TRUST_PROMISES = [
-  { icon: "bolt", label: "Devis 2 minutes", sub: "Souscription 100 % en ligne", color: "moutarde" as const },
-  { icon: "phone-call", label: "Conseiller humain", sub: "Joignable 9h-19h, samedi inclus", color: "corail" as const },
-  { icon: "smile", label: "Paiement souple", sub: "Mensualisé sans frais", color: "menthe" as const },
-  { icon: "shield", label: "Sans engagement", sub: "Résiliation libre, loi Lemoine", color: "ciel" as const },
+  {
+    year: "2000",
+    location: "Polynésie Française",
+    event: "Création d'ANSET en Polynésie",
+    accent: "ciel" as const,
+  },
+  {
+    year: "2010",
+    location: "La Réunion",
+    event: "Implantation BEACOM dans l'océan Indien",
+    accent: "corail" as const,
+  },
+  {
+    year: "2024",
+    location: "Nouvelle-Calédonie",
+    event: "Ouverture en Nouvelle-Calédonie",
+    accent: "menthe" as const,
+  },
+  {
+    year: "2026",
+    location: "Métropole",
+    event: "Lancement d'ANSET ASSURANCES France",
+    accent: "moutarde" as const,
+  },
 ] as const;
 
 export const NAV_LINKS = [
   { label: "Nos offres", href: "/#offres" },
-  { label: "Comment ça marche", href: "/comment-ca-marche" },
+  { label: "Comment ça marche", href: "/#comment-ca-marche" },
+  { label: "Le service ANSET", href: "/#service" },
   { label: "Notre histoire", href: "/notre-histoire" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
 ] as const;
 
-export const TAGLINE = "À VOS CÔTÉS, À TOUT MOMENT";
+export const TAGLINE = "À VOS CÔTÉS · À TOUT MOMENT";
