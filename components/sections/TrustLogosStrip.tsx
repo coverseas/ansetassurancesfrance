@@ -1,51 +1,31 @@
-import { ShieldCheck, Handshake } from "lucide-react";
+import Image from "next/image";
+
+const PARTNERS = [
+  { src: "/images/partners/logo-mdm.svg", alt: "Mutuelle du Motard", height: 44 },
+  { src: "/images/partners/logo-heyme.png", alt: "HEYME", height: 32 },
+  { src: "/images/partners/logo-ocirp.jpeg", alt: "OCIRP", height: 44 },
+  { src: "/images/partners/logo-gpj.svg", alt: "GPJ", height: 44 },
+];
 
 export function TrustLogosStrip() {
   return (
-    <section className="bg-white border-y border-anset-blue/10 py-8 md:py-10">
+    <section className="bg-white border-y border-anset-blue/10 py-10 md:py-12">
       <div className="container-anset">
-        <div className="flex flex-wrap items-center justify-center gap-x-8 md:gap-x-14 gap-y-6">
-
-          <div className="flex items-center gap-3">
-            <ShieldCheck className="w-9 h-9 text-anset-blue" strokeWidth={1.4} aria-hidden="true" />
-            <div>
-              <div className="text-base md:text-[17px] font-black text-anset-blue tracking-tight leading-tight">
-                ORIAS 26000597
-              </div>
-              <div className="text-[10px] uppercase tracking-[1.5px] text-anset-slate/70 font-bold mt-0.5">
-                Courtier immatriculé
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden md:block w-px h-12 bg-anset-blue/10" aria-hidden="true" />
-
-          <div className="flex items-center gap-3">
-            <div className="bg-trustpilot text-white w-9 h-9 rounded-md flex items-center justify-center text-lg font-black leading-none" aria-hidden="true">★</div>
-            <div>
-              <div className="text-base md:text-[17px] font-black text-anset-blue tracking-tight leading-tight">
-                4,7/5 · 847 avis
-              </div>
-              <div className="text-[10px] uppercase tracking-[1.5px] text-anset-slate/70 font-bold mt-0.5">
-                Trustpilot vérifiés
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden md:block w-px h-12 bg-anset-blue/10" aria-hidden="true" />
-
-          <div className="flex items-center gap-3">
-            <Handshake className="w-9 h-9 text-anset-blue" strokeWidth={1.4} aria-hidden="true" />
-            <div>
-              <div className="text-base md:text-[17px] font-black text-anset-blue tracking-tight leading-tight">
-                Groupama · Mutuelle du Motard · Liberty Mutual
-              </div>
-              <div className="text-[10px] uppercase tracking-[1.5px] text-anset-slate/70 font-bold mt-0.5">
-                Nos porteurs de risque & RC Pro
-              </div>
-            </div>
-          </div>
-
+        <p className="text-center text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-slate/60 mb-8">
+          Nos partenaires assureurs
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-16 gap-y-6">
+          {PARTNERS.map((p) => (
+            <Image
+              key={p.src}
+              src={p.src}
+              alt={p.alt}
+              width={180}
+              height={p.height}
+              className="w-auto object-contain"
+              style={{ height: p.height }}
+            />
+          ))}
         </div>
       </div>
     </section>
