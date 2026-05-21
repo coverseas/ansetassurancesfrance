@@ -1,63 +1,106 @@
 import Link from "next/link";
-import { Logo } from "@/components/ui/Logo";
-import { LeafPattern } from "@/components/ui/LeafPattern";
 import { COMPANY, CONTACT } from "@/lib/constants";
+import { Phone, Mail, MapPin } from "lucide-react";
+
+const colTitleCls = "text-[10px] uppercase tracking-[2px] font-black text-white/70 mb-4";
+const linkCls = "block text-sm text-white/85 font-medium hover:text-white transition-colors mb-2.5";
+const contactLinkCls = "flex items-start gap-2 text-sm text-white/85 font-medium hover:text-white transition-colors mb-3";
 
 export function Footer() {
   return (
-    <footer className="bg-anset-blue-dark text-white relative overflow-hidden">
-      <LeafPattern color="white" opacity={0.05} size={400} className="absolute -right-20 -top-20" />
-      <div className="container-anset py-12 md:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10">
-          <div className="md:col-span-4">
-            <Logo variant="white" size="md" />
-            <p className="mt-4 text-sm text-white/70 max-w-xs leading-relaxed">
-              L'assurance simple, claire, chaleureuse. Pensée pour la diaspora ultramarine et l'ensemble des familles en métropole.
+    <footer className="bg-anset-blue text-white">
+      <div className="container-anset py-14 md:py-16">
+
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-8">
+
+          <div className="col-span-2 lg:col-span-4">
+            <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
+              <div className="bg-white text-anset-blue w-11 h-11 rounded-lg flex items-center justify-center font-black text-lg tracking-tight">
+                A
+              </div>
+              <div>
+                <div className="font-black text-xl tracking-tight leading-none">ANSET</div>
+                <div className="text-[10px] uppercase tracking-[2px] text-white/60 mt-1">Assurances</div>
+              </div>
+            </Link>
+            <p className="text-sm text-white/75 leading-relaxed max-w-xs font-medium">
+              {COMPANY.brandName} est la marque commerciale de {COMPANY.legalName}, courtier en assurance immatriculé à l'ORIAS sous le numéro {COMPANY.oriasNumber}.
+            </p>
+            <p className="text-xs text-white/55 mt-4 leading-relaxed">
+              25 ans d'expertise en outre-mer.<br />
+              Désormais en métropole.
             </p>
           </div>
-          <div className="md:col-span-2">
-            <h4 className="text-sm font-black uppercase tracking-wider text-anset-moutarde mb-4">Nos offres</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/produits/sante-chien-chat" className="text-white/80 hover:text-white">Santé chien & chat</Link></li>
-              <li><Link href="/produits/moto-cyclo" className="text-white/80 hover:text-white">Moto, cyclo, scooter</Link></li>
-              <li><Link href="/produits/moto-pro" className="text-white/80 hover:text-white">Moto pour les pros</Link></li>
-            </ul>
+
+          <div className="lg:col-span-2">
+            <p className={colTitleCls}>Nos assurances</p>
+            <Link href="/bientot?produit=sante-animale" className={linkCls}>Santé chien & chat</Link>
+            <Link href="/bientot?produit=moto" className={linkCls}>Moto & cyclo</Link>
+            <Link href="/bientot?produit=voyage" className={linkCls}>Voyage</Link>
+            <Link href="/bientot?produit=emprunteur" className={linkCls}>Emprunteur</Link>
           </div>
-          <div className="md:col-span-2">
-            <h4 className="text-sm font-black uppercase tracking-wider text-anset-moutarde mb-4">La marque</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/notre-histoire" className="text-white/80 hover:text-white">Notre histoire</Link></li>
-              <li><Link href="/comment-ca-marche" className="text-white/80 hover:text-white">Comment ça marche</Link></li>
-              <li><Link href="/faq" className="text-white/80 hover:text-white">FAQ</Link></li>
-            </ul>
+
+          <div className="lg:col-span-2">
+            <p className={colTitleCls}>La marque</p>
+            <Link href="/notre-histoire" className={linkCls}>Notre histoire</Link>
+            <Link href="/comment-ca-marche" className={linkCls}>Comment ça marche</Link>
+            <Link href="/#service" className={linkCls}>Notre service</Link>
+            <Link href="/contact" className={linkCls}>Nous contacter</Link>
           </div>
-          <div className="md:col-span-4">
-            <h4 className="text-sm font-black uppercase tracking-wider text-anset-moutarde mb-4">Nous joindre</h4>
-            <p className="text-sm text-white/80 mb-2"><a href={CONTACT.phoneHref} className="font-bold hover:text-white">{CONTACT.phoneDisplay}</a></p>
-            <p className="text-sm text-white/80 mb-2"><a href={CONTACT.emailHref} className="hover:text-white">{CONTACT.email}</a></p>
-            <p className="text-xs text-white/60 mt-3">{CONTACT.hours}</p>
-            <p className="text-xs text-white/60 mt-2">{COMPANY.address.full}</p>
+
+          <div className="lg:col-span-2">
+            <p className={colTitleCls}>Légal</p>
+            <Link href="/mentions-legales" className={linkCls}>Mentions légales</Link>
+            <Link href="/politique-de-confidentialite" className={linkCls}>Confidentialité</Link>
+            <Link href="/cookies" className={linkCls}>Cookies</Link>
+            <Link href="/conditions-generales" className={linkCls}>CGU</Link>
+          </div>
+
+          <div className="col-span-2 lg:col-span-2">
+            <p className={colTitleCls}>Contact</p>
+            <a href={CONTACT.phoneHref} className={contactLinkCls}>
+              <Phone className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+              {CONTACT.phoneDisplay}
+            </a>
+            <a href={`mailto:${CONTACT.email}`} className={`${contactLinkCls} break-all`}>
+              <Mail className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+              {CONTACT.email}
+            </a>
+            <p className="flex items-start gap-2 text-sm text-white/75 font-medium leading-relaxed">
+              <MapPin className="w-3.5 h-3.5 mt-1 flex-shrink-0" aria-hidden="true" />
+              {COMPANY.address.full}
+            </p>
+          </div>
+
+        </div>
+
+        <div className="border-t border-white/15 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[11px] text-white/55 leading-relaxed font-medium">
+            <div>
+              <p className="font-black text-white/75 text-[11px] uppercase tracking-wider mb-2">Statut professionnel</p>
+              <p>
+                {COMPANY.legalName} — SIREN {COMPANY.siren}<br />
+                Inscrite à l'ORIAS n° {COMPANY.oriasNumber} en qualité de courtier d'assurance (catégorie B). Soumise au contrôle de l'ACPR — 4 place de Budapest, 75436 Paris Cedex 09.
+              </p>
+            </div>
+            <div>
+              <p className="font-black text-white/75 text-[11px] uppercase tracking-wider mb-2">Garanties</p>
+              <p>
+                Responsabilité civile professionnelle et garantie financière assurées par {COMPANY.insurer}. Contrat Evolution Broker n° {COMPANY.contractNumber}, distribué par {COMPANY.insurerAgent}.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="border-t border-white/15 pt-8 text-xs text-white/55 leading-relaxed space-y-3">
-          <p>
-            <span className="font-bold text-white">{COMPANY.brandName}</span> est la marque commerciale de <span className="font-bold text-white">{COMPANY.legalName}</span>, {COMPANY.legalForm}, dont le siège social est situé au {COMPANY.address.full}, SIREN {COMPANY.siren}, RCS {COMPANY.rcs}.
+
+        <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[11px] text-white/55 font-medium">
+            © {new Date().getFullYear()} {COMPANY.legalName}. Tous droits réservés.
           </p>
-          <p>
-            Immatriculée au Registre unique des intermédiaires en assurance, banque et finance (ORIAS) sous le n° <a href="https://www.orias.fr/welcome" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:underline">{COMPANY.oriasNumber}</a> en qualité de {COMPANY.oriasCategory}. Vérifiable sur <a href="https://www.orias.fr" target="_blank" rel="noopener noreferrer" className="hover:underline">orias.fr</a>.
+          <p className="text-[10px] text-white/40 uppercase tracking-wider font-bold">
+            À vos côtés · À tout moment
           </p>
-          <p>
-            Responsabilité civile professionnelle et garantie financière conformes aux articles L.512-6, L.512-7, R.512-14 et A.512-4 du Code des assurances délivrées par <span className="text-white">{COMPANY.insurer}</span> (contrat {COMPANY.contractName}).
-          </p>
-          <p>Sous le contrôle de l'{COMPANY.acpr.name}, {COMPANY.acpr.address}.</p>
         </div>
-        <div className="flex flex-wrap gap-x-6 gap-y-2 mt-6 text-xs text-white/60">
-          <Link href="/mentions-legales" className="hover:text-white">Mentions légales</Link>
-          <Link href="/rgpd" className="hover:text-white">Politique de confidentialité</Link>
-          <Link href="/cookies" className="hover:text-white">Cookies</Link>
-          <Link href="/cgu" className="hover:text-white">CGU</Link>
-          <Link href="/contact" className="hover:text-white">Contact</Link>
-        </div>
+
       </div>
     </footer>
   );
