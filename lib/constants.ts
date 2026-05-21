@@ -155,6 +155,13 @@ export const PRODUCTS = [
 
 export const ROADMAP = [
   {
+    slug: "emprunteur",
+    name: "Assurance emprunteur",
+    icon: "banknote",
+    universe: "famille" as const,
+    status: "Très bientôt",
+  },
+  {
     slug: "rapatriement",
     name: "Assistance rapatriement",
     icon: "shield-plus",
