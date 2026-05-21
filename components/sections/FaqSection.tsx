@@ -24,6 +24,15 @@ const FAQS = [
   },
 ];
 
+const detailsCls = "group bg-white rounded-2xl border border-anset-blue/10 overflow-hidden hover:border-anset-blue/30 transition-colors shadow-premium-sm";
+const summaryCls = "flex items-center justify-between gap-4 px-5 md:px-6 py-4 md:py-5 cursor-pointer list-none";
+const questionCls = "text-sm md:text-base font-black text-anset-blue tracking-tight pr-4 leading-snug";
+const chevronCls = "w-5 h-5 text-anset-blue flex-shrink-0 transition-transform group-open:rotate-180";
+const answerCls = "text-sm text-anset-slate leading-relaxed font-medium";
+const ctaBoxCls = "mt-10 text-center bg-white rounded-2xl border border-anset-blue/10 p-6 md:p-8 shadow-premium-sm";
+const ctaPrimaryCls = "inline-flex items-center gap-2 bg-anset-blue text-white text-sm font-black px-5 py-3 rounded-xl hover:bg-anset-blue-dark transition-colors";
+const ctaSecondaryCls = "inline-flex items-center gap-2 bg-white text-anset-blue border-2 border-anset-blue text-sm font-black px-5 py-3 rounded-xl hover:bg-anset-blue/5 transition-colors";
+
 export function FaqSection() {
   return (
     <section className="bg-anset-mist/30 border-t border-anset-blue/10 py-16 md:py-20">
@@ -39,30 +48,19 @@ export function FaqSection() {
 
         <div className="space-y-3">
           {FAQS.map((faq, idx) => (
-            <details
-              key={idx}
-              className="group bg-white rounded-2xl border border-anset-blue/10 overflow-hidden hover:border-anset-blue/30 transition-colors shadow-premium-sm"
-            >
-              <summary className="flex items-center justify-between gap-4 px-5 md:px-6 py-4 md:py-5 cursor-pointer list-none">
-                <h3 className="text-sm md:text-base font-black text-anset-blue tracking-tight pr-4 leading-snug">
-                  {faq.q}
-                </h3>
-                <ChevronDown
-                  className="w-5 h-5 text-anset-blue flex-shrink-0 transition-transform group-open:rotate-180"
-                  strokeWidth={2.5}
-                  aria-hidden="true"
-                />
+            <details key={idx} className={detailsCls}>
+              <summary className={summaryCls}>
+                <h3 className={questionCls}>{faq.q}</h3>
+                <ChevronDown className={chevronCls} strokeWidth={2.5} aria-hidden="true" />
               </summary>
               <div className="px-5 md:px-6 pb-5 md:pb-6">
-                <p className="text-sm text-anset-slate leading-relaxed font-medium">
-                  {faq.a}
-                </p>
+                <p className={answerCls}>{faq.a}</p>
               </div>
             </details>
           ))}
         </div>
 
-        <div className="mt-10 text-center bg-white rounded-2xl border border-anset-blue/10 p-6 md:p-8 shadow-premium-sm">
+        <div className={ctaBoxCls}>
           <p className="text-base md:text-lg font-black text-anset-blue tracking-tight mb-2">
             Vous avez une autre question ?
           </p>
@@ -70,17 +68,11 @@ export function FaqSection() {
             Écrivez à Poé pour une réponse immédiate, ou parlez directement à un conseiller.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            
-              href={CONTACT.phoneHref}
-              className="inline-flex items-center gap-2 bg-anset-blue text-white text-sm font-black px-5 py-3 rounded-xl hover:bg-anset-blue-dark transition-colors"
-            >
+            <a href={CONTACT.phoneHref} className={ctaPrimaryCls}>
               <Phone className="w-4 h-4" aria-hidden="true" />
               {CONTACT.phoneDisplay}
             </a>
-            
-              href={`mailto:${CONTACT.email}`}
-              className="inline-flex items-center gap-2 bg-white text-anset-blue border-2 border-anset-blue text-sm font-black px-5 py-3 rounded-xl hover:bg-anset-blue/5 transition-colors"
-            >
+            <a href={`mailto:${CONTACT.email}`} className={ctaSecondaryCls}>
               <MessageCircle className="w-4 h-4" aria-hidden="true" />
               Nous écrire
             </a>
