@@ -86,3 +86,56 @@ a { color: inherit; text-decoration: none; }
     width: 100%;
   }
 }
+
+/* Legal pages typography */
+.legal-prose h2 {
+  font-family: var(--font-sonny);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--anset-blue);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+.legal-prose h2:first-child { margin-top: 0; }
+.legal-prose h3 {
+  font-family: var(--font-sonny);
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--anset-blue);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose p {
+  font-size: 0.95rem;
+  color: var(--anset-slate);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.legal-prose ul, .legal-prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+.legal-prose li {
+  font-size: 0.95rem;
+  color: var(--anset-slate);
+  line-height: 1.65;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.legal-prose a {
+  color: var(--anset-blue);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+.legal-prose a:hover {
+  color: var(--anset-corail);
+}
+.legal-prose strong {
+  color: var(--anset-blue);
+  font-weight: 900;
+}

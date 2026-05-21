@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { sonnyGothic, inter } from "./fonts";
 import "./globals.css";
+import { CookieBanner } from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+              <CookieBanner />
       </body>
     </html>
   );
