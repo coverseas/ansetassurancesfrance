@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s · ANSET Assurances",
   },
   description:
-    "ANSET Assurances. 25 ans d'expertise en outre-mer, désormais en métropole. Santé chien-chat avec Groupama, moto-cyclo avec la Mutuelle du Motard, voyage et rapatriement. Devis 2 minutes, conseillers humains 6j/7, Ana 24h/24.",
+    "ANSET Assurances. 25 ans d'expertise en outre-mer, désormais en métropole. Santé chien-chat avec Groupama, moto-cyclo avec la Mutuelle du Motard, voyage et rapatriement. Devis 2 minutes, conseillers humains 6j/7, Poé 24h/24.",
   metadataBase: new URL("https://ansetassurances.com"),
   openGraph: {
     title: "ANSET Assurances · À vos côtés, à tout moment.",

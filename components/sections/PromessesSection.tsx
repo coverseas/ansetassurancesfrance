@@ -8,7 +8,7 @@ const PROMESSES = [
   },
   {
     icon: Sparkles,
-    title: "Ana, disponible jour et nuit",
+    title: "Poé, disponible jour et nuit",
     description: "Pour vos attestations, déclarations, questions courantes — à toute heure, week-ends inclus. L'IA quand c'est rapide, l'humain quand c'est important.",
   },
   {

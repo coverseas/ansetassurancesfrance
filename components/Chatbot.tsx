@@ -8,7 +8,7 @@ export function Chatbot() {
         <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-anset-menthe border-2 border-anset-blue" aria-hidden="true" />
       </div>
       <div className="text-xs leading-tight">
-        <span className="block font-black text-[11px]">Bonjour, je suis Ana</span>
+        <span className="block font-black text-[11px]">Bonjour, je suis Poé</span>
         <span className="text-[9.5px] text-white/70 font-medium">Posez-moi votre question</span>
       </div>
     </div>

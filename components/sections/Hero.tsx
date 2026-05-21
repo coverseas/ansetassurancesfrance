@@ -31,7 +31,7 @@ export function Hero() {
           </h1>
 
           <p className={descCls}>
-            Vingt-cinq ans d'expertise et de chaleur au service des familles d'outre-mer. Aujourd'hui en métropole, avec des conseillers experts et Ana, notre agente IA.
+            Vingt-cinq ans d'expertise et de chaleur au service des familles d'outre-mer. Aujourd'hui en métropole, avec des conseillers experts et Poé, notre agente IA.
           </p>
 
           <div className="mt-7">

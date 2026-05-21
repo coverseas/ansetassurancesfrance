@@ -3,14 +3,14 @@ import { ChevronDown } from "lucide-react";
 const FAQS = [
   {
     q: "Si j'ai un sinistre, comment ça se passe ?",
-    a: "Vous nous appelez ou écrivez à Ana 24h/24. Un conseiller dédié prend votre dossier en main, vous explique les étapes, et vous tient au courant à chaque étape. Sur la santé animale, le remboursement tombe en moyenne en 48 heures.",
+    a: "Vous nous appelez ou écrivez à Poé 24h/24. Un conseiller dédié prend votre dossier en main, vous explique les étapes, et vous tient au courant à chaque étape. Sur la santé animale, le remboursement tombe en moyenne en 48 heures.",
   },
   {
     q: "Pourquoi passer par ANSET plutôt que d'aller directement chez l'assureur ?",
     a: "Même prix, mais avec un courtier qui négocie pour vous, vous accompagne dans le choix, et reste votre interlocuteur unique pour tous vos contrats. Vous bénéficiez de notre expertise sans surcoût — nous sommes rémunérés par les assureurs, pas par vous.",
   },
   {
-    q: "Que peut faire Ana, exactement ?",
+    q: "Que peut faire Poé, exactement ?",
     a: "Envoyer une attestation immédiatement, déclarer un sinistre simple, modifier vos coordonnées, répondre à toute question sur vos contrats, et vous orienter vers un conseiller humain quand c'est nécessaire. Elle est formée sur l'ensemble de nos produits et apprend en continu.",
   },
   {
