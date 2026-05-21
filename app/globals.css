@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --anset-blue: #1c509d;
+  --anset-blue-dark: #102e5d;
+  --anset-blue-light: #5c82bc;
+  --anset-rouge: #e73a30;
+  --anset-ciel: #6a9baf;
+  --anset-corail: #d36f6b;
+  --anset-moutarde: #e69d46;
+  --anset-menthe: #77aa92;
+  --anset-lilas: #715689;
+  --anset-corail-soft: #fceae9;
+  --anset-moutarde-soft: #fcf1de;
+  --anset-menthe-soft: #ddebe3;
+  --anset-ciel-soft: #d6e3eb;
+  --anset-lilas-soft: #e3dcec;
+  --anset-ink: #1a2740;
+  --anset-slate: #4a5a75;
+  --anset-mist: #f2f6fb;
+  --anset-white: #ffffff;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--anset-white);
+  color: var(--anset-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--anset-blue);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer utilities {
+  .container-anset {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-anset {
+      padding-inline: 2rem;
+    }
+  }
+  .leaf-pattern {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+  }
+}
