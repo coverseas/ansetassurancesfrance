@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { CalendarHeart } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { CalendarHeart, Phone } from "lucide-react";
 import { LeafPattern } from "@/components/ui/LeafPattern";
-import { URLS, TRUSTPILOT } from "@/lib/constants";
+import { DevisSelector } from "@/components/ui/DevisSelector";
+import { CONTACT, TRUSTPILOT } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -17,26 +17,29 @@ export function Hero() {
             Lancement métropole
           </span>
 
-          <h1 className="text-5xl md:text-6xl lg:text-[68px] xl:text-[78px] font-black text-anset-blue leading-[0.95] tracking-[-0.048em]">
+          <h1 className="text-5xl md:text-6xl lg:text-[64px] xl:text-[72px] font-black text-anset-blue leading-[0.96] tracking-[-0.045em]">
             À vos côtés,<br />
             à tout moment.<br />
             <span className="text-anset-corail">Même en France.</span>
           </h1>
 
-          <p className="mt-7 text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-lg">
-            Vingt-cinq ans d'expertise et de chaleur au service des familles d'outre-mer. Aujourd'hui en métropole, avec des conseillers experts et Ana, notre agente IA, qui répond jour et nuit.
+          <p className="mt-6 text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-lg">
+            Vingt-cinq ans d'expertise et de chaleur au service des familles d'outre-mer. Aujourd'hui en métropole, avec des conseillers experts et Ana, notre agente IA.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-2.5">
-            <Button as="a" href={URLS.souscriptionSanteAnimale} variant="secondary" size="lg">
-              Mon devis en 2 minutes
-            </Button>
-            <Button as="a" href="/contact" variant="ghost" size="lg">
-              Parler à un conseiller
-            </Button>
+          <div className="mt-7">
+            <DevisSelector />
           </div>
 
-          <div className="mt-10 pt-7 border-t border-anset-blue/10 flex flex-wrap items-center gap-x-7 gap-y-3">
+          
+            href={CONTACT.phoneHref}
+            className="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-anset-slate hover:text-anset-corail transition-colors w-fit"
+          >
+            <Phone className="w-3.5 h-3.5" aria-hidden="true" />
+            Préférez parler à un conseiller ? Appelez-nous au <span className="text-anset-blue font-black">{CONTACT.phoneDisplay}</span>
+          </a>
+
+          <div className="mt-7 pt-6 border-t border-anset-blue/10 flex flex-wrap items-center gap-x-7 gap-y-3">
             <div className="flex items-center gap-2.5">
               <div className="bg-trustpilot text-white w-6 h-6 rounded flex items-center justify-center text-sm font-black leading-none">★</div>
               <div className="text-[12px] text-anset-slate leading-tight">
@@ -53,7 +56,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative rounded-[24px] overflow-hidden shadow-[0_24px_60px_rgba(16,46,93,0.18)] min-h-[440px] lg:min-h-[560px] order-1 lg:order-2">
+        <div className="relative rounded-[24px] overflow-hidden shadow-premium-lg min-h-[480px] lg:min-h-[640px] order-1 lg:order-2">
           <Image
             src="/images/hero-ultramer.png"
             alt="ANSET Assurances · Diaspora ultramarine — Réunion, Polynésie Française, Nouvelle-Calédonie en France"
