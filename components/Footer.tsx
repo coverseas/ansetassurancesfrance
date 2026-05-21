@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY, CONTACT } from "@/lib/constants";
 import { Phone, Mail, MapPin } from "lucide-react";
 
@@ -14,14 +15,15 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-8">
 
           <div className="col-span-2 lg:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
-              <div className="bg-white text-anset-blue w-11 h-11 rounded-lg flex items-center justify-center font-black text-lg tracking-tight">
-                A
-              </div>
-              <div>
-                <div className="font-black text-xl tracking-tight leading-none">ANSET</div>
-                <div className="text-[10px] uppercase tracking-[2px] text-white/60 mt-1">Assurances</div>
-              </div>
+            <Link href="/" className="inline-block mb-5">
+              <Image
+                src="/images/logo-anset-white.png"
+                alt="ANSET Assurances"
+                width={220}
+                height={100}
+                className="h-16 w-auto"
+                priority
+              />
             </Link>
             <p className="text-sm text-white/75 leading-relaxed max-w-xs font-medium">
               {COMPANY.brandName} est la marque commerciale de {COMPANY.legalName}, courtier en assurance immatriculé à l'ORIAS sous le numéro {COMPANY.oriasNumber}.
