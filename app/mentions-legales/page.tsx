@@ -19,7 +19,7 @@ export default function MentionsLegalesPage() {
         <strong>{COMPANY.legalName}</strong><br />
         Société par actions simplifiée unipersonnelle au capital de {COMPANY.capital}<br />
         SIREN : {COMPANY.siren}<br />
-        Siège social : {COMPANY.address}<br />
+        Siège social : {COMPANY.address.full}<br />
         Marque commerciale : {COMPANY.brandName}
       </p>
 
