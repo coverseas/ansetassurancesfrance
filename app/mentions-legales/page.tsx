@@ -30,7 +30,7 @@ export default function MentionsLegalesPage() {
 
       <h2>Statut professionnel</h2>
       <p>
-        Coverseas SASU est inscrite à l'<strong>ORIAS</strong> (Organisme pour le Registre unique des Intermédiaires en Assurance, Banque et Finance) sous le numéro <strong>{COMPANY.orias}</strong>, en qualité de courtier en assurance (catégorie B).
+        Coverseas SASU est inscrite à l'<strong>ORIAS</strong> (Organisme pour le Registre unique des Intermédiaires en Assurance, Banque et Finance) sous le numéro <strong>{COMPANY.oriasNumber}</strong>, en qualité de courtier en assurance (catégorie B).
       </p>
       <p>
         L'inscription peut être vérifiée à tout moment sur le site officiel : <a href="https://www.orias.fr" target="_blank" rel="noopener noreferrer">www.orias.fr</a>
@@ -66,7 +66,7 @@ export default function MentionsLegalesPage() {
       <p>
         <strong>{HOSTING.name}</strong><br />
         {HOSTING.address}<br />
-        <a href={HOSTING.url} target="_blank" rel="noopener noreferrer">{HOSTING.url}</a>
+        <a href={HOSTING.website} target="_blank" rel="noopener noreferrer">{HOSTING.website}</a>
       </p>
 
       <h2>Propriété intellectuelle</h2>
