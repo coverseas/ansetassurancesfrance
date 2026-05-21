@@ -64,7 +64,7 @@ export function TestimonialsSection() {
                 aria-hidden="true"
               />
               <div>
-                <div className="font-black text-sm leading-tight">{featured.author}</div>
+                <div className="font-black text-sm leading-tight">{featured.name}</div>
                 <div className="text-[12px] text-white/70 font-medium mt-0.5">{featured.location}</div>
               </div>
             </div>
@@ -72,7 +72,7 @@ export function TestimonialsSection() {
 
           {rest.map((t, idx) => (
             <div
-              key={t.author}
+              key={t.name}
               className="bg-white rounded-[20px] p-6 md:p-7 border border-anset-blue/10 shadow-premium-sm"
             >
               <div className="flex items-center justify-between mb-4">
@@ -95,7 +95,7 @@ export function TestimonialsSection() {
                   aria-hidden="true"
                 />
                 <div>
-                  <div className="font-black text-sm text-anset-blue leading-tight">{t.author}</div>
+                  <div className="font-black text-sm text-anset-blue leading-tight">{t.name}</div>
                   <div className="text-[12px] text-anset-slate font-medium mt-0.5">{t.location}</div>
                 </div>
               </div>
