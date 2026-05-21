@@ -15,7 +15,7 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
   const width = height * 2.4;
 
   const src = variant === "white"
-    ? "/images/logo-anset-white.png"
+    ? "/images/logo-anset.png"
     : "/images/logo-anset.png";
 
   return (
