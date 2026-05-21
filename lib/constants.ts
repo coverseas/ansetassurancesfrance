@@ -74,11 +74,11 @@ export const HOSTING = {
 } as const;
 
 export const URLS = {
-  souscriptionSanteAnimale: "https://souscription.ansetassurances.com/sante-animale",
-  souscriptionMoto: "https://souscription.ansetassurances.com/moto",
-  souscriptionMotoPro: "https://souscription.ansetassurances.com/moto-pro",
-  souscriptionVoyage: "https://souscription.ansetassurances.com/voyage",
-  espaceClient: "https://espace.ansetassurances.com",
+  souscriptionSanteAnimale: "/bientot?produit=sante-animale",
+  souscriptionMoto: "/bientot?produit=moto",
+  souscriptionMotoPro: "/bientot?produit=moto-pro",
+  souscriptionVoyage: "/bientot?produit=voyage",
+  espaceClient: "/bientot?produit=espace-client",
 } as const;
 
 export const TRUSTPILOT = {
