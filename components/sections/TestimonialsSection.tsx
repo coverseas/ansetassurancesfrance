@@ -39,7 +39,7 @@ export function TestimonialsSection() {
               <span className="text-trustpilot text-base tracking-wider leading-none">★★★★★</span>
             </div>
             <div className="text-[10px] text-anset-slate/70 font-bold">
-              {TRUSTPILOT.totalReviews} avis vérifiés
+              {TRUSTPILOT.count} avis vérifiés
             </div>
           </div>
         </div>
