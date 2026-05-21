@@ -25,6 +25,12 @@ const PARTNERS = [
     role: "Emprunteur",
     height: 44,
   },
+  {
+    src: "/images/partners/logo-trustpilot.png",
+    alt: "Trustpilot",
+    role: "Note clients · 4,7/5",
+    height: 28,
+  },
 ];
 
 export function TrustLogosStrip() {
@@ -32,7 +38,7 @@ export function TrustLogosStrip() {
     <section className="bg-white border-y border-anset-blue/10 py-10 md:py-12">
       <div className="container-anset">
         <p className="text-center text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-slate/60 mb-8">
-          Nos partenaires assureurs
+          Nos partenaires
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-14 gap-y-7">
           {PARTNERS.map((p) => (
