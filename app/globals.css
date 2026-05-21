@@ -25,7 +25,7 @@
   --anset-slate: #4a5a75;
   --anset-mist: #f2f6fb;
   --trustpilot-green: #00b67a;
-  --font-display: var(--font-sora), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-sonny), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
