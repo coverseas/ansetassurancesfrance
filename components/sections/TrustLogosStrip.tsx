@@ -1,10 +1,30 @@
 import Image from "next/image";
 
 const PARTNERS = [
-  { src: "/images/partners/logo-mdm.svg", alt: "Mutuelle du Motard", height: 44 },
-  { src: "/images/partners/logo-heyme.png", alt: "HEYME", height: 32 },
-  { src: "/images/partners/logo-ocirp.jpeg", alt: "OCIRP", height: 44 },
-  { src: "/images/partners/logo-gpj.svg", alt: "GPJ", height: 44 },
+  {
+    src: "/images/partners/logo-gpj.svg",
+    alt: "Groupama PJ",
+    role: "Santé animale",
+    height: 44,
+  },
+  {
+    src: "/images/partners/logo-mdm.svg",
+    alt: "Mutuelle du Motard",
+    role: "Moto & cyclo",
+    height: 44,
+  },
+  {
+    src: "/images/partners/logo-heyme.png",
+    alt: "HEYME",
+    role: "Voyage",
+    height: 32,
+  },
+  {
+    src: "/images/partners/logo-ocirp.jpeg",
+    alt: "OCIRP",
+    role: "Emprunteur",
+    height: 44,
+  },
 ];
 
 export function TrustLogosStrip() {
@@ -14,17 +34,21 @@ export function TrustLogosStrip() {
         <p className="text-center text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-slate/60 mb-8">
           Nos partenaires assureurs
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-16 gap-y-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-14 gap-y-7">
           {PARTNERS.map((p) => (
-            <Image
-              key={p.src}
-              src={p.src}
-              alt={p.alt}
-              width={180}
-              height={p.height}
-              className="w-auto object-contain"
-              style={{ height: p.height }}
-            />
+            <div key={p.src} className="flex flex-col items-center gap-2.5">
+              <Image
+                src={p.src}
+                alt={p.alt}
+                width={200}
+                height={p.height}
+                className="w-auto object-contain"
+                style={{ height: p.height }}
+              />
+              <span className="text-[10px] uppercase tracking-[1.5px] text-anset-slate/70 font-bold">
+                {p.role}
+              </span>
+            </div>
           ))}
         </div>
       </div>
