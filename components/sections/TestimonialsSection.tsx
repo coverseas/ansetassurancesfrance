@@ -55,7 +55,7 @@ export function TestimonialsSection() {
               </span>
             </div>
             <p className="text-base md:text-lg font-bold leading-relaxed mb-6 relative z-10">
-              {featured.text}
+              {featured.quote}
             </p>
             <div className="flex items-center gap-3 pt-5 border-t border-white/15 relative z-10">
               <div
@@ -86,7 +86,7 @@ export function TestimonialsSection() {
                 />
               </div>
               <p className="text-anset-blue text-sm md:text-base font-medium leading-relaxed mb-6">
-                {t.text}
+                {t.quote}
               </p>
               <div className="flex items-center gap-3 pt-5 border-t border-anset-blue/10">
                 <div
