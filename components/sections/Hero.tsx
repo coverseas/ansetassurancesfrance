@@ -55,7 +55,7 @@ export function Hero() {
 
         <div className="relative rounded-[24px] overflow-hidden shadow-[0_24px_60px_rgba(16,46,93,0.18)] aspect-[5/4] lg:aspect-[5/6] min-h-[400px] order-1 lg:order-2">
           <Image
-            src="/images/hero-ultramer.jpg"
+            src="/images/hero-ultramer.png"
             alt="ANSET Assurances · Diaspora ultramarine — Réunion, Polynésie Française, Nouvelle-Calédonie en France"
             fill
             priority
