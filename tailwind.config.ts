@@ -39,7 +39,7 @@ const config: Config = {
             dark: "#523F66",
             soft: "#E3DCEC",
           },
-          cream: "#FBF9F4",
+          cream: "#FFFFFF",
           ink: "#1A2740",
           slate: "#4A5A75",
           mist: "#F2F6FB",
