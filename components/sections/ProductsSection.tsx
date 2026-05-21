@@ -19,42 +19,42 @@ const productUrlMap: Record<string, string> = {
 const colorThemes = {
   corail: {
     bgGradient: "bg-gradient-to-br from-anset-corail-soft via-anset-corail-soft/60 to-anset-corail/30",
-    circleColor: "from-anset-corail/60",
     leafColor: "var(--anset-corail)",
     iconColor: "text-anset-corail",
     tagText: "text-anset-corail-dark",
+    glowColor: "rgba(211,111,107,0.3)",
   },
   moutarde: {
     bgGradient: "bg-gradient-to-br from-anset-moutarde-soft via-anset-moutarde-soft/60 to-anset-moutarde/30",
-    circleColor: "from-anset-moutarde/60",
     leafColor: "var(--anset-moutarde)",
     iconColor: "text-anset-moutarde",
     tagText: "text-anset-moutarde-dark",
+    glowColor: "rgba(230,157,70,0.3)",
   },
   menthe: {
     bgGradient: "bg-gradient-to-br from-anset-menthe-soft via-anset-menthe-soft/60 to-anset-menthe/40",
-    circleColor: "from-anset-menthe/60",
     leafColor: "var(--anset-menthe)",
     iconColor: "text-anset-menthe",
     tagText: "text-anset-menthe-dark",
+    glowColor: "rgba(119,170,146,0.3)",
   },
 } as const;
 
 export function ProductsSection() {
   return (
-    <section id="offres" className="bg-white relative overflow-hidden border-t border-anset-blue/10">
+    <section id="offres" className="bg-white relative overflow-hidden border-t border-anset-blue/8">
       <LeafPattern color="var(--anset-blue)" opacity={0.04} size={200} className="-right-12 -top-12" />
-      <div className="container-anset py-16 md:py-20 relative z-10">
-        <div className="max-w-2xl mb-10">
-          <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-corail mb-2">
+      <div className="container-anset py-20 md:py-28 relative z-10">
+        <div className="max-w-2xl mb-12 md:mb-16">
+          <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-corail mb-3">
             Trois offres dès le lancement
           </p>
-          <h2 className="text-3xl md:text-[28px] lg:text-[30px] text-anset-blue tracking-tight">
-            Nos premières assurances <span className="accent">pour vous</span>
+          <h2 className="text-3xl md:text-[40px] lg:text-[48px] text-anset-blue tracking-[-0.035em] leading-[1.05] font-black">
+            Nos premières assurances <span className="accent">pour vous</span>.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {PRODUCTS.map((product) => {
             const Icon = iconMap[product.icon];
             const theme = colorThemes[product.color];
@@ -63,68 +63,65 @@ export function ProductsSection() {
             return (
               <article
                 key={product.slug}
-                className="rounded-2xl border border-anset-blue/8 bg-anset-cream overflow-hidden flex flex-col"
+                className="rounded-3xl border border-anset-blue/8 bg-white overflow-hidden flex flex-col shadow-premium-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-premium-hover hover:border-anset-blue/15"
               >
-                <div className={`relative h-36 md:h-40 flex items-center justify-center overflow-hidden ${theme.bgGradient}`}>
+                <div className={`relative h-44 md:h-48 flex items-center justify-center overflow-hidden ${theme.bgGradient}`}>
                   <div
-                    className={`absolute -top-12 -right-12 w-44 h-44 rounded-full opacity-40 bg-gradient-radial ${theme.circleColor} to-transparent`}
-                    style={{
-                      background: `radial-gradient(circle, ${theme.leafColor} 0%, transparent 70%)`,
-                      opacity: 0.4,
-                    }}
+                    className="absolute -top-12 -right-12 w-48 h-48 rounded-full"
+                    style={{ background: `radial-gradient(circle, ${theme.glowColor} 0%, transparent 70%)` }}
                     aria-hidden="true"
                   />
-                  <LeafPattern color={theme.leafColor} opacity={0.18} size={130} className="-left-5 -bottom-8" />
-                  <LeafPattern color={theme.leafColor} opacity={0.18} size={90} rotate={160} className="-right-7 -top-4" />
+                  <LeafPattern color={theme.leafColor} opacity={0.2} size={140} className="-left-5 -bottom-8" />
+                  <LeafPattern color={theme.leafColor} opacity={0.2} size={95} rotate={160} className="-right-7 -top-4" />
 
-                  <span className={`absolute top-3 left-3 bg-white/97 px-2.5 py-1 rounded text-[9px] font-black tracking-[1.4px] ${theme.tagText} z-10`}>
+                  <span className={`absolute top-4 left-4 bg-white/97 px-3 py-1.5 rounded-md text-[10px] font-black tracking-[1.4px] ${theme.tagText} z-10 shadow-premium-sm`}>
                     {product.category}
                   </span>
 
                   {product.onlineSubscription && (
-                    <span className="absolute top-3 right-3 bg-anset-blue text-white px-2 py-1 rounded text-[9px] font-black tracking-[0.8px] flex items-center gap-1 z-10">
-                      <Zap className="w-2.5 h-2.5" aria-hidden="true" />
+                    <span className="absolute top-4 right-4 bg-anset-blue text-white px-2.5 py-1.5 rounded-md text-[10px] font-black tracking-[0.8px] flex items-center gap-1 z-10 shadow-premium-sm">
+                      <Zap className="w-3 h-3" aria-hidden="true" />
                       EN LIGNE
                     </span>
                   )}
 
-                  <div className="relative z-10 bg-white w-[72px] h-[72px] rounded-full flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.08)]">
-                    {Icon && <Icon className={`w-9 h-9 ${theme.iconColor}`} strokeWidth={1.5} aria-hidden="true" />}
+                  <div className="relative z-10 bg-white w-20 h-20 rounded-full flex items-center justify-center shadow-premium-lg">
+                    {Icon && <Icon className={`w-10 h-10 ${theme.iconColor}`} strokeWidth={1.5} aria-hidden="true" />}
                   </div>
 
-                  <div className="absolute bottom-3 right-3 bg-white/97 px-2.5 py-1.5 rounded-md flex items-baseline gap-0.5 z-10 shadow-[0_4px_10px_rgba(0,0,0,0.06)]">
-                    <span className="text-[8px] text-anset-slate font-bold">dès</span>
-                    <span className="text-base font-black text-anset-blue tracking-tight">
+                  <div className="absolute bottom-4 right-4 bg-white/97 px-3 py-2 rounded-lg flex items-baseline gap-0.5 z-10 shadow-premium-sm">
+                    <span className="text-[9px] text-anset-slate font-bold">dès</span>
+                    <span className="text-lg font-black text-anset-blue tracking-tight">
                       {product.priceFrom}{product.priceCurrency}
                     </span>
-                    <span className="text-[9px] text-anset-slate font-bold">{product.pricePeriod}</span>
+                    <span className="text-[10px] text-anset-slate font-bold">{product.pricePeriod}</span>
                   </div>
                 </div>
 
-                <div className="p-5 flex flex-col gap-2.5 flex-1">
-                  <h3 className="text-base md:text-lg font-black text-anset-blue tracking-tight leading-tight">
+                <div className="p-6 md:p-7 flex flex-col gap-3 flex-1">
+                  <h3 className="text-xl md:text-2xl font-black text-anset-blue tracking-tight leading-tight">
                     {product.name}
                   </h3>
-                  <p className="text-xs md:text-sm text-anset-slate leading-relaxed font-medium">
+                  <p className="text-sm text-anset-slate leading-relaxed font-medium">
                     {product.description}
                   </p>
-                  <ul className="flex flex-col gap-1 py-1">
+                  <ul className="flex flex-col gap-1.5 py-1">
                     {product.features.map((feat) => (
-                      <li key={feat} className="text-[11px] text-anset-blue flex items-center gap-1.5 font-semibold">
-                        <Check className="w-3 h-3 text-anset-menthe flex-shrink-0" strokeWidth={2.5} aria-hidden="true" />
+                      <li key={feat} className="text-xs text-anset-blue flex items-center gap-2 font-semibold">
+                        <Check className="w-3.5 h-3.5 text-anset-menthe flex-shrink-0" strokeWidth={2.5} aria-hidden="true" />
                         {feat}
                       </li>
                     ))}
                   </ul>
-                  <div className="flex gap-1.5 mt-1">
-                    <Button as="a" href={url} variant="secondary" size="sm" className="flex-1">
+                  <div className="flex gap-2 mt-2">
+                    <Button as="a" href={url} variant="secondary" size="md" className="flex-1">
                       Mon devis
                     </Button>
-                    <Button as="a" href={`/produits/${product.slug}`} variant="ghost" size="sm" className="flex-1">
+                    <Button as="a" href={`/produits/${product.slug}`} variant="ghost" size="md" className="flex-1">
                       Détails
                     </Button>
                   </div>
-                  <p className="text-[9px] text-anset-slate/60 text-right mt-1 italic">
+                  <p className="text-[10px] text-anset-slate/60 text-right mt-1 italic">
                     {product.porteurMention}
                   </p>
                 </div>
