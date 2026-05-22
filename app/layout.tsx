@@ -108,4 +108,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-anset-cream text-anset-ink antialiased">
         <Header />
         <main>{children}</main>
-        <Footer />
+        <Footer />        <CookieBanner />
+        <StickyMobileCTA />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </body>
+    </html>
+  );
+}
