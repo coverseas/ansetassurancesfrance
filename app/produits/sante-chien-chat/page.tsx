@@ -12,7 +12,7 @@ const backLinkCls = "inline-flex items-center gap-1.5 text-[12px] font-bold text
 const pillCls = "inline-flex items-center gap-2 text-anset-moutarde-dark text-[11px] font-black uppercase tracking-[2.5px] mb-5";
 const h1Cls = "text-3xl md:text-5xl lg:text-[56px] font-black text-anset-blue tracking-[-0.04em] leading-[1.05] mb-6";
 const leadCls = "text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-2xl mb-8";
-const heroBgCls = "bg-gradient-to-b from-anset-corail-soft to-white py-16 md:py-24 border-b border-anset-blue/10";
+const heroBgCls = "bg-gradient-to-b from-anset-moutarde-soft to-white py-16 md:py-24 border-b border-anset-blue/10";
 const sectionCls = "py-14 md:py-18";
 const sectionMistCls = "py-14 md:py-18 bg-anset-mist/30 border-y border-anset-blue/10";
 const sectionTitleCls = "text-2xl md:text-3xl font-black text-anset-blue tracking-tight leading-[1.15] mb-3";
@@ -35,10 +35,10 @@ export default function SanteChienChatPage() {
           </Link>
           <span className={pillCls}>
             <PawPrint className="w-3.5 h-3.5" strokeWidth={2.2} aria-hidden="true" />
-            Santé animale · Ma famille
+            Santé animale · Mes biens
           </span>
           <h1 className={h1Cls}>
-            La santé de votre chien, de votre chat. <span className="accent">Couverte, où que vous soyez.</span>
+            La santé de votre chien, de votre chat. <span className="text-anset-moutarde-dark">Couverte, où que vous soyez.</span>
           </h1>
           <p className={leadCls}>
             Deux formules pour protéger votre animal contre les accidents, et — si vous le souhaitez — contre les maladies. Souscription en ligne en quelques minutes, remboursement après envoi des justificatifs, résiliable à tout moment après un an.
@@ -65,7 +65,7 @@ export default function SanteChienChatPage() {
           <div className="text-center mb-10">
             <p className={sectionLabelCls}>Nos formules</p>
             <h2 className={sectionTitleCls}>
-              Deux niveaux de couverture, <span className="accent">au choix</span>.
+              Deux niveaux de couverture, <span className="text-anset-moutarde-dark">au choix</span>.
             </h2>
           </div>
 
@@ -141,7 +141,7 @@ export default function SanteChienChatPage() {
           <div className="mb-8">
             <p className={sectionLabelCls}>L'option franchise</p>
             <h2 className={sectionTitleCls}>
-              Avec ou sans franchise, <span className="accent">vous décidez</span>.
+              Avec ou sans franchise, <span className="text-anset-moutarde-dark">vous décidez</span>.
             </h2>
             <p className="text-base text-anset-slate leading-relaxed font-medium max-w-2xl mt-3">
               Vous choisissez la formule qui correspond à votre profil et à votre budget. Votre conseiller vous accompagne pour identifier l'option la plus pertinente.
@@ -190,7 +190,7 @@ export default function SanteChienChatPage() {
           <div className="text-center mb-10">
             <p className={sectionLabelCls}>Délais de carence</p>
             <h2 className={sectionTitleCls}>
-              Quand votre couverture <span className="accent">commence-t-elle</span> ?
+              Quand votre couverture <span className="text-anset-moutarde-dark">commence-t-elle</span> ?
             </h2>
             <p className="text-sm md:text-base text-anset-slate leading-relaxed font-medium max-w-2xl mx-auto mt-3">
               À partir de la date d'effet de votre contrat, votre couverture s'active progressivement selon le type d'événement.
@@ -246,7 +246,7 @@ export default function SanteChienChatPage() {
             <div>
               <p className={sectionLabelCls}>Où êtes-vous couvert ?</p>
               <h2 className={sectionTitleCls}>
-                Une couverture qui voyage <span className="accent">avec votre animal</span>.
+                Une couverture qui voyage <span className="text-anset-moutarde-dark">avec votre animal</span>.
               </h2>
               <p className="text-base text-anset-slate leading-relaxed font-medium mt-3">
                 Votre contrat protège votre animal en cas d'accident ou de maladie en France métropolitaine, en Guadeloupe, en Martinique, à La Réunion, en Nouvelle-Calédonie, en Polynésie française, dans tous les pays de l'Union européenne, à Andorre, à Monaco, ainsi qu'au Royaume-Uni et en Suisse.
@@ -265,7 +265,7 @@ export default function SanteChienChatPage() {
           <div className="text-center mb-10">
             <p className={sectionLabelCls}>Conditions de souscription</p>
             <h2 className={sectionTitleCls}>
-              Suis-je <span className="accent">éligible</span> ?
+              Suis-je <span className="text-anset-moutarde-dark">éligible</span> ?
             </h2>
           </div>
 
@@ -329,7 +329,7 @@ export default function SanteChienChatPage() {
           <div className="mb-8">
             <p className={sectionLabelCls}>Transparence</p>
             <h2 className={sectionTitleCls}>
-              Ce qui <span className="accent">n'est pas couvert</span>.
+              Ce qui <span className="text-anset-moutarde-dark">n'est pas couvert</span>.
             </h2>
             <p className="text-base text-anset-slate leading-relaxed font-medium mt-3 max-w-2xl">
               Nous préférons être clairs dès le départ. Voici les principaux cas où votre contrat ne s'applique pas, pour vous éviter toute mauvaise surprise.
@@ -368,7 +368,7 @@ export default function SanteChienChatPage() {
           <div className="text-center mb-10">
             <p className={sectionLabelCls}>En cas de sinistre</p>
             <h2 className={sectionTitleCls}>
-              Quatre étapes, <span className="accent">remboursement rapide</span>.
+              Quatre étapes, <span className="text-anset-moutarde-dark">remboursement rapide</span>.
             </h2>
             <p className="text-sm md:text-base text-anset-slate leading-relaxed font-medium max-w-2xl mx-auto mt-3">
               Un parcours simple, accompagné par Poé et par votre conseiller ANSET si vous en avez besoin.
