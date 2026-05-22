@@ -329,10 +329,34 @@ export const HISTORY_MILESTONES = [
     accent: "moutarde" as const,
   },
 ] as const;
-
+export const NAV_STRUCTURE: Array<{
+  label: string;
+  href?: string;
+  submenu?: Array<{ label: string; href: string; description?: string }>;
+}> = [
+  {
+    label: "Nos offres",
+    submenu: [
+      { label: "Santé chien-chat", href: "/produits/sante-chien-chat", description: "Avec Groupama PJ" },
+      { label: "Moto et cyclo", href: "/produits/moto-cyclo", description: "Avec Mutuelle du Motard" },
+      { label: "Voyage et rapatriement", href: "/produits/voyage", description: "Avec HEYME" },
+    ],
+  },
+  {
+    label: "Mes démarches",
+    submenu: [
+      { label: "Nous contacter", href: "/contact", description: "Téléphone, email, formulaire" },
+      { label: "Demande de remboursement", href: "/sinistre/sante-animale", description: "Déposer un sinistre" },
+      { label: "Faire une réclamation", href: "/contact#formulaire", description: "Mécontentement contractuel" },
+      { label: "Résilier mon contrat", href: "/resiliation", description: "Procédure 3 clics" },
+    ],
+  },
+  { label: "Comment ça marche", href: "/comment-ca-marche" },
+  { label: "Notre histoire", href: "/notre-histoire" },
+];
 export const NAV_LINKS = [
   { label: "Nos offres", href: "/#offres" },
-  { label: "Comment ça marche", href: "/#comment-ca-marche" },
+  { label: "Comment ça marche", href: "/comment-ca-marche" },
   { label: "Le service ANSET", href: "/#service" },
   { label: "Notre histoire", href: "/notre-histoire" },
 ] as const;
