@@ -411,20 +411,22 @@ export default function SanteChienChatPage() {
 
           </div>
 
-          <div className="bg-anset-blue/[0.04] rounded-2xl p-6 md:p-7 border border-anset-blue/10">
-            <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-5 items-start">
-              <div className="w-12 h-12 bg-anset-blue rounded-xl flex items-center justify-center flex-shrink-0">
-                <Phone className="w-5 h-5 text-white" strokeWidth={2} aria-hidden="true" />
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[2px] text-anset-corail font-black mb-1">Une question pendant votre sinistre ?</p>
-                <p className="text-base text-anset-blue font-black tracking-tight mb-1">
-                  +33 1 41 43 77 16 · taper 3
-                </p>
-                <p className="text-xs text-anset-slate font-medium leading-relaxed">
-                  Service sinistres Groupama PJ — du lundi au vendredi de 9h à 17h30 (heure métropole, sauf jours fériés). Ou écrivez à <strong className="text-anset-blue">chienchat@protectionjuridique.fr</strong>.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/sinistre/sante-animale" className="bg-anset-corail text-white rounded-2xl p-6 md:p-7 hover:bg-anset-corail-dark transition-colors group block">
+              <p className="text-[10px] uppercase tracking-[2px] text-white/70 font-black mb-1">Le plus rapide</p>
+              <p className="text-lg font-black tracking-tight mb-2">Déposer ma demande en ligne →</p>
+              <p className="text-sm text-white/85 font-medium leading-relaxed">
+                Formulaire dédié avec upload des pièces. Confirmation par email.
+              </p>
+            </Link>
+            <div className="bg-anset-blue/[0.04] rounded-2xl p-6 md:p-7 border border-anset-blue/10">
+              <p className="text-[10px] uppercase tracking-[2px] text-anset-corail font-black mb-1">Par téléphone</p>
+              <p className="text-base text-anset-blue font-black tracking-tight mb-1">
+                +33 1 41 43 77 16 · taper 3
+              </p>
+              <p className="text-xs text-anset-slate font-medium leading-relaxed">
+                Groupama PJ — lundi au vendredi 9h-17h30 (heure métropole). Ou <strong className="text-anset-blue">chienchat@protectionjuridique.fr</strong>.
+              </p>
             </div>
           </div>
         </div>
