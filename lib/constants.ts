@@ -6,10 +6,10 @@
 export const COMPANY = {
   legalName: "COVERSEAS",
   legalForm: "SASU - Société par actions simplifiée à associé unique",
-  capital: "1 000 euros",
+  capital: "500 euros",
   siren: "993355486",
   rcs: "PARIS 993355486",
-  vatNumber: "FR à compléter",
+  vatNumber: "Non assujetti (activité d'assurance, art. 261 C, 2° du CGI)",
   oriasNumber: "26000597",
   oriasCategory: "COA — Courtier d'assurance ou de réassurance",
   oriasRegistrationDate: "23/01/2026",
@@ -52,12 +52,12 @@ export const CONTACT = {
   phone: "09 75 12 34 56",
   phoneDisplay: "09 75 12 34 56",
   phoneHref: "tel:+33975123456",
-  email: "bonjour@ansetassurances.com",
-  emailHref: "mailto:bonjour@ansetassurances.com",
-  emailReclamations: "reclamations@ansetassurances.com",
-  emailReclamationsHref: "mailto:reclamations@ansetassurances.com",
-  emailDpo: "rgpd@ansetassurances.com",
-  emailDpoHref: "mailto:rgpd@ansetassurances.com",
+  email: "contact@coverseas.fr",
+  emailHref: "mailto:contact@coverseas.fr",
+  emailReclamations: "contact@coverseas.fr",
+  emailReclamationsHref: "mailto:contact@coverseas.fr",
+  emailDpo: "contact@coverseas.fr",
+  emailDpoHref: "mailto:contact@coverseas.fr",
   hours: "Lundi au samedi · 9h-19h",
   hoursDetailed: [
     { day: "Lundi - Vendredi", time: "9h - 19h" },
@@ -82,8 +82,8 @@ export const URLS = {
 } as const;
 
 export const TRUSTPILOT = {
-  rating: "4,7",
-  count: 847,
+  rating: "",
+  count: 0,
   name: "Trustpilot",
 } as const;
 
@@ -216,8 +216,6 @@ export const STATS = [
 ] as const;
 
 export const TEAM_MEMBERS = [
-  { name: "Marie", role: "Conseillère senior" },
-  { name: "Jean-Pierre", role: "Conseiller particuliers" },
   { name: "Vaiana", role: "Conseillère outre-mer" },
   { name: "Patrick", role: "Conseiller moto pro" },
   { name: "Léa", role: "Conseillère voyage" },
@@ -311,13 +309,13 @@ export const HISTORY_MILESTONES = [
     accent: "ciel" as const,
   },
   {
-    year: "2010",
+    year: "2012",
     location: "La Réunion",
     event: "Implantation BEACOM dans l'océan Indien",
     accent: "corail" as const,
   },
   {
-    year: "2024",
+    year: "2023",
     location: "Nouvelle-Calédonie",
     event: "Ouverture en Nouvelle-Calédonie",
     accent: "menthe" as const,
