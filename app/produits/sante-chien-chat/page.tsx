@@ -8,15 +8,15 @@ export const metadata: Metadata = {
   description: "Assurance santé pour votre chien ou votre chat dès 12€/mois. Deux formules au choix (accident ou accident + maladie), avec ou sans franchise. Risque porté par Groupama PJ.",
 };
 
-const backLinkCls = "inline-flex items-center gap-1.5 text-[12px] font-bold text-anset-slate hover:text-anset-corail transition-colors mb-8";
-const pillCls = "inline-flex items-center gap-2 text-anset-corail-dark text-[11px] font-black uppercase tracking-[2.5px] mb-5";
+const backLinkCls = "inline-flex items-center gap-1.5 text-[12px] font-bold text-anset-slate hover:text-anset-moutarde-dark transition-colors mb-8";
+const pillCls = "inline-flex items-center gap-2 text-anset-moutarde-dark text-[11px] font-black uppercase tracking-[2.5px] mb-5";
 const h1Cls = "text-3xl md:text-5xl lg:text-[56px] font-black text-anset-blue tracking-[-0.04em] leading-[1.05] mb-6";
 const leadCls = "text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-2xl mb-8";
 const heroBgCls = "bg-gradient-to-b from-anset-corail-soft to-white py-16 md:py-24 border-b border-anset-blue/10";
 const sectionCls = "py-14 md:py-18";
 const sectionMistCls = "py-14 md:py-18 bg-anset-mist/30 border-y border-anset-blue/10";
 const sectionTitleCls = "text-2xl md:text-3xl font-black text-anset-blue tracking-tight leading-[1.15] mb-3";
-const sectionLabelCls = "text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-corail mb-2";
+const sectionLabelCls = "text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-moutarde-dark mb-2";
 const formulaCardCls = "bg-white rounded-[20px] border-2 p-6 md:p-7 shadow-premium-sm";
 const featureRowCls = "flex items-start gap-2.5 text-sm text-anset-slate leading-relaxed font-medium";
 const ctaPrimaryCls = "inline-flex items-center justify-center gap-2 bg-anset-blue text-white text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-anset-blue-dark transition-colors shadow-premium";
@@ -77,7 +77,7 @@ export default function SanteChienChatPage() {
                   <p className="text-[10px] uppercase tracking-[2px] text-anset-slate/60 font-black">Formule</p>
                   <h3 className="text-2xl font-black text-anset-blue tracking-tight mt-1">Smart</h3>
                 </div>
-                <div className="bg-anset-corail-soft text-anset-corail-dark text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
+                <div className="bg-anset-moutarde-soft text-anset-moutarde-dark text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
                   Accident
                 </div>
               </div>
@@ -96,8 +96,8 @@ export default function SanteChienChatPage() {
               </div>
             </div>
 
-            <div className={`${formulaCardCls} border-anset-corail/40 relative`}>
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-anset-corail text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full">
+            <div className={`${formulaCardCls} border-anset-moutarde/40 relative`}>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-anset-moutarde text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full">
                 Couverture complète
               </div>
               <div className="flex items-center justify-between mb-5 mt-2">
@@ -105,7 +105,7 @@ export default function SanteChienChatPage() {
                   <p className="text-[10px] uppercase tracking-[2px] text-anset-slate/60 font-black">Formule</p>
                   <h3 className="text-2xl font-black text-anset-blue tracking-tight mt-1">Premium</h3>
                 </div>
-                <div className="bg-anset-corail-soft text-anset-corail-dark text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
+                <div className="bg-anset-moutarde-soft text-anset-moutarde-dark text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full">
                   Accident + Maladie
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function SanteChienChatPage() {
           </div>
 
           <div className="mt-8 bg-anset-blue/[0.03] rounded-2xl p-5 md:p-6 border border-anset-blue/10">
-            <p className="text-xs uppercase tracking-[2px] text-anset-corail font-black mb-2">Plafond annuel</p>
+            <p className="text-xs uppercase tracking-[2px] text-anset-moutarde-dark font-black mb-2">Plafond annuel</p>
             <p className="text-anset-blue font-bold leading-relaxed">
               <span className="text-2xl md:text-3xl font-black mr-2">2 000€ TTC</span> remboursés par année d'assurance, dont 1 600€ pour les frais de soins et 400€ pour les médicaments.
             </p>
@@ -165,10 +165,10 @@ export default function SanteChienChatPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border-2 border-anset-corail/30 shadow-premium-sm">
+            <div className="bg-white rounded-2xl p-6 border-2 border-anset-moutarde/30 shadow-premium-sm">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 bg-anset-corail-soft rounded-lg flex items-center justify-center">
-                  <Check className="w-4 h-4 text-anset-corail-dark" strokeWidth={2.5} aria-hidden="true" />
+                <div className="w-8 h-8 bg-anset-moutarde-soft rounded-lg flex items-center justify-center">
+                  <Check className="w-4 h-4 text-anset-moutarde-dark" strokeWidth={2.5} aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-black text-anset-blue tracking-tight">Sans franchise</h3>
               </div>
@@ -211,7 +211,7 @@ export default function SanteChienChatPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-6 border border-anset-blue/10 shadow-premium-sm text-center">
-              <div className="w-12 h-12 bg-anset-moutarde/15 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-anset-moutarde-soft rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-5 h-5 text-anset-moutarde" strokeWidth={1.8} aria-hidden="true" />
               </div>
               <div className="text-3xl font-black text-anset-blue mb-1">45 jours</div>
@@ -222,8 +222,8 @@ export default function SanteChienChatPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-6 border border-anset-blue/10 shadow-premium-sm text-center">
-              <div className="w-12 h-12 bg-anset-corail-soft rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-5 h-5 text-anset-corail-dark" strokeWidth={1.8} aria-hidden="true" />
+              <div className="w-12 h-12 bg-anset-moutarde-soft rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-5 h-5 text-anset-moutarde-dark" strokeWidth={1.8} aria-hidden="true" />
               </div>
               <div className="text-3xl font-black text-anset-blue mb-1">120 jours</div>
               <p className="text-sm font-bold text-anset-blue mb-1">Chirurgie suite maladie</p>
@@ -272,8 +272,8 @@ export default function SanteChienChatPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
             <div className="bg-white rounded-2xl p-5 border border-anset-blue/10 shadow-premium-sm flex items-start gap-4">
-              <div className="w-10 h-10 bg-anset-corail-soft rounded-xl flex items-center justify-center flex-shrink-0">
-                <FileCheck className="w-5 h-5 text-anset-corail-dark" strokeWidth={1.8} aria-hidden="true" />
+              <div className="w-10 h-10 bg-anset-moutarde-soft rounded-xl flex items-center justify-center flex-shrink-0">
+                <FileCheck className="w-5 h-5 text-anset-moutarde-dark" strokeWidth={1.8} aria-hidden="true" />
               </div>
               <div>
                 <h3 className="text-sm font-black text-anset-blue tracking-tight mb-1">Vous, le souscripteur</h3>
@@ -296,7 +296,7 @@ export default function SanteChienChatPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-5 border border-anset-blue/10 shadow-premium-sm flex items-start gap-4">
-              <div className="w-10 h-10 bg-anset-moutarde/15 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 bg-anset-moutarde-soft rounded-xl flex items-center justify-center flex-shrink-0">
                 <Stethoscope className="w-5 h-5 text-anset-moutarde" strokeWidth={1.8} aria-hidden="true" />
               </div>
               <div>
@@ -350,7 +350,7 @@ export default function SanteChienChatPage() {
                 "Les chiens classés en catégorie 1 (chiens d'attaque) ou 2 (chiens de garde et de défense) — non assurables par ce contrat.",
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-sm text-anset-slate leading-relaxed font-medium">
-                  <X className="w-4 h-4 text-anset-corail flex-shrink-0 mt-0.5" strokeWidth={2.5} aria-hidden="true" />
+                  <X className="w-4 h-4 text-anset-moutarde-dark flex-shrink-0 mt-0.5" strokeWidth={2.5} aria-hidden="true" />
                   {item}
                 </li>
               ))}
@@ -378,7 +378,7 @@ export default function SanteChienChatPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
 
             <div className="bg-white rounded-2xl p-5 border border-anset-blue/10 shadow-premium-sm">
-              <div className="text-anset-corail font-black text-4xl mb-3">01</div>
+              <div className="text-anset-moutarde-dark font-black text-4xl mb-3">01</div>
               <h3 className="text-base font-black text-anset-blue tracking-tight mb-2">Téléchargez la feuille de soins</h3>
               <p className="text-sm text-anset-slate font-medium leading-relaxed">
                 Disponible depuis votre espace client ou auprès de votre conseiller ANSET.
@@ -412,7 +412,7 @@ export default function SanteChienChatPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/sinistre/sante-animale" className="bg-anset-corail text-white rounded-2xl p-6 md:p-7 hover:bg-anset-corail-dark transition-colors group block">
+            <Link href="/sinistre/sante-animale" className="bg-anset-moutarde text-white rounded-2xl p-6 md:p-7 hover:bg-anset-moutarde-dark transition-colors group block">
               <p className="text-[10px] uppercase tracking-[2px] text-white/70 font-black mb-1">Le plus rapide</p>
               <p className="text-lg font-black tracking-tight mb-2">Déposer ma demande en ligne →</p>
               <p className="text-sm text-white/85 font-medium leading-relaxed">
@@ -420,7 +420,7 @@ export default function SanteChienChatPage() {
               </p>
             </Link>
             <div className="bg-anset-blue/[0.04] rounded-2xl p-6 md:p-7 border border-anset-blue/10">
-              <p className="text-[10px] uppercase tracking-[2px] text-anset-corail font-black mb-1">Par téléphone</p>
+              <p className="text-[10px] uppercase tracking-[2px] text-anset-moutarde-dark font-black mb-1">Par téléphone</p>
               <p className="text-base text-anset-blue font-black tracking-tight mb-1">
                 +33 1 41 43 77 16 · taper 3
               </p>
@@ -461,7 +461,7 @@ export default function SanteChienChatPage() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-[-0.03em] leading-[1.1] mb-3">
             Obtenez votre devis<br />
-            <span className="text-anset-corail">en quelques minutes.</span>
+            <span className="text-anset-moutarde-dark">en quelques minutes.</span>
           </h2>
           <p className="text-base text-white/75 font-medium mb-8">
             Sans engagement. Vous découvrirez le tarif exact selon le profil de votre animal.

@@ -90,11 +90,11 @@ export const TRUSTPILOT = {
 export const PRODUCTS = [
   {
     slug: "sante-chien-chat",
-    universe: "famille",
+    universe: "biens",
     name: "Santé chien & chat",
     shortName: "Santé animale",
-    category: "MA FAMILLE",
-    color: "corail",
+    category: "MES BIENS",
+    color: "moutarde",
     icon: "cat",
     porteurMention: "Risque porté par Groupama PJ",
     audience: "Particuliers",
@@ -136,7 +136,7 @@ export const PRODUCTS = [
     name: "Voyage & rapatriement",
     shortName: "Voyage",
     category: "MES VOYAGES",
-    color: "menthe",
+    color: "corail",
     icon: "world",
     porteurMention: "Risque porté par HEYME",
     audience: "Particuliers",
