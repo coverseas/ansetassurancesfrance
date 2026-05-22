@@ -74,7 +74,7 @@ const organizationJsonLd = {
   alternateName: "COVERSEAS",
   legalName: "COVERSEAS SASU",
   url: SITE_URL,
-  logo: `${SITE_URL}/images/logo-anset-white.png`,
+  logo: `${SITE_URL}/images/logo-anset.png`,
   image: `${SITE_URL}/opengraph-image`,
   description:
     "Courtier en assurances. Santé animale, moto, voyage. Une marque de COVERSEAS SASU, immatriculée à l'ORIAS sous le numéro 26000597.",
