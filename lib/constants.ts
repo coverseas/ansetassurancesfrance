@@ -346,7 +346,7 @@ export const NAV_STRUCTURE: Array<{
     label: "Mes démarches",
     submenu: [
       { label: "Nous contacter", href: "/contact", description: "Téléphone, email, formulaire" },
-      { label: "Demande de remboursement", href: "/sinistre/sante-animale", description: "Déposer un sinistre" },
+      { label: "Dépôt de prise en charge santé animale", href: "/sinistre/sante-animale", description: "Remboursement de frais vétérinaires" },
       { label: "Faire une réclamation", href: "/contact#formulaire", description: "Mécontentement contractuel" },
       { label: "Résilier mon contrat", href: "/resiliation", description: "Procédure 3 clics" },
     ],
