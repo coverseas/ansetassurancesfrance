@@ -71,6 +71,14 @@ export type ProductLandingData = {
   ctaTitle: string;
   ctaAccent: string;
   ctaSubtitle: string;
+  /** Petite note sous les CTA du hero. Défaut : produit Acheel à venir. */
+  heroNote?: string;
+  /** Kicker au-dessus du titre de la section CTA finale. */
+  ctaKicker?: string;
+  /** Libellé du bouton principal du hero. Défaut : "Obtenir mon devis". */
+  primaryCtaLabel?: string;
+  /** Libellé du bouton principal de la CTA finale. Défaut : "Être prévenu du lancement". */
+  finalCtaLabel?: string;
 };
 
 const h1Cls = "text-3xl md:text-5xl lg:text-[56px] font-black text-anset-blue tracking-[-0.04em] leading-[1.05] mb-6";
@@ -85,6 +93,10 @@ export function ProductLanding(props: ProductLandingData) {
   const t = THEMES[props.color];
   const Icon = props.icon;
   const labelCls = `text-[10px] md:text-xs font-black uppercase tracking-[2.5px] mb-2 ${t.label}`;
+  const heroNote = props.heroNote ?? "Bientôt en ligne · Risque porté par Acheel";
+  const ctaKicker = props.ctaKicker ?? "Intéressé par cette offre ?";
+  const primaryCtaLabel = props.primaryCtaLabel ?? "Obtenir mon devis";
+  const finalCtaLabel = props.finalCtaLabel ?? "Être prévenu du lancement";
 
   return (
     <main className="bg-white">
@@ -106,7 +118,7 @@ export function ProductLanding(props: ProductLandingData) {
           <p className={leadCls}>{props.lead}</p>
           <div className="flex flex-wrap gap-3">
             <Link href={props.bientotHref} className={ctaPrimaryCls}>
-              Obtenir mon devis
+              {primaryCtaLabel}
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
             <Link href={CALENDLY.sectionHref} className={ctaSecondaryCls}>
@@ -116,7 +128,7 @@ export function ProductLanding(props: ProductLandingData) {
           </div>
           <p className="mt-6 inline-flex items-center gap-2 text-xs text-anset-slate/70 font-medium">
             <Clock className="w-3.5 h-3.5" aria-hidden="true" />
-            Bientôt en ligne · Risque porté par Acheel
+            {heroNote}
           </p>
         </div>
       </section>
@@ -221,7 +233,7 @@ export function ProductLanding(props: ProductLandingData) {
       <section className="py-16 md:py-20 bg-anset-blue text-white">
         <div className="container-anset max-w-3xl text-center">
           <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-white/60 mb-3">
-            Intéressé par cette offre ?
+            {ctaKicker}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-[-0.03em] leading-[1.1] mb-3">
             {props.ctaTitle}<br />
@@ -230,7 +242,7 @@ export function ProductLanding(props: ProductLandingData) {
           <p className="text-base text-white/75 font-medium mb-8">{props.ctaSubtitle}</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href={props.bientotHref} className="inline-flex items-center justify-center gap-2 bg-white text-anset-blue text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-anset-mist transition-colors">
-              Être prévenu du lancement
+              {finalCtaLabel}
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
             <Link href={CALENDLY.sectionHref} className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/30 text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-white/10 transition-colors">
