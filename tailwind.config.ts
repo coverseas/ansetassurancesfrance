@@ -8,6 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // ─────────────────────────────────────────────────────────────
+        // Charte couleur par catégorie d'assurance (ANSET) :
+        //   • Assurance de BIENS      → moutarde  (auto, habitation, PNO, moto, santé animale)
+        //   • Assurance de PERSONNE   → corail    (santé/mutuelle individuelle)
+        //   • Assurance PRO           → blue      (offres professionnelles)
+        //   • ÉPARGNE                 → menthe (vert)
+        //   • INFORMATION             → lilas (violet) — jamais une catégorie produit
+        // Voir CATEGORY_COLORS dans lib/constants.ts.
+        // ─────────────────────────────────────────────────────────────
         anset: {
           blue: { DEFAULT: "#1C509D", dark: "#102E5D", light: "#5C82BC" },
           rouge: "#E73A30",

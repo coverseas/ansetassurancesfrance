@@ -99,6 +99,19 @@ export const TRUSTPILOT = {
   name: "Trustpilot",
 } as const;
 
+/**
+ * Charte couleur par catégorie d'assurance ANSET.
+ * Chaque produit doit utiliser la couleur de sa catégorie (champ `color`).
+ * Le lilas (violet) est réservé à l'information et n'est jamais une catégorie produit.
+ */
+export const CATEGORY_COLORS = {
+  biens: "moutarde", // Auto, habitation, PNO, moto, santé animale
+  personne: "corail", // Santé / mutuelle individuelle
+  pro: "blue", // Offres professionnelles
+  epargne: "menthe", // Épargne (vert)
+  information: "lilas", // Information uniquement — pas un produit
+} as const;
+
 export const PRODUCTS = [
   {
     slug: "sante-chien-chat",
