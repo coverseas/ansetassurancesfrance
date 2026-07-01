@@ -100,7 +100,12 @@ export async function POST(request: NextRequest) {
   const stream = anthropic.messages.stream({
     model: MODEL,
     max_tokens: 1024,
-    system: buildSystemPrompt(),
+    // Prompt système (produits + base de connaissances) mis en cache :
+    // stable d'un message à l'autre, il est facturé au tarif "cache read"
+    // (~10x moins cher) après la première requête.
+    system: [
+      { type: "text", text: buildSystemPrompt(), cache_control: { type: "ephemeral" } },
+    ],
     messages,
   });
 
