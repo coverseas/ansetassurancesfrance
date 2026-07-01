@@ -92,6 +92,9 @@ export function Footer() {
               </p>
             </div>
           </div>
+          <p className="text-[11px] text-white/55 leading-relaxed font-medium mt-6">
+            Le site est édité par COVERSEAS SASU, société de courtage en assurances immatriculée à l'ORIAS, exploitant le nom commercial «&nbsp;ANSET Assurances&nbsp;».
+          </p>
         </div>
 
         <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
