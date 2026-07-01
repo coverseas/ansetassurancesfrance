@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { PRODUCTS, CONTACT, CALENDLY, COMPANY } from "@/lib/constants";
+import { getReference } from "@/lib/poe/knowledge";
+import { rateLimit } from "@/lib/rate-limit";
 
-// Modèle configurable. Défaut : Opus 4.8. Passer à "claude-haiku-4-5"
-// (variable d'env ANSET_CHATBOT_MODEL) pour réduire fortement le coût si besoin.
-const MODEL = process.env.ANSET_CHATBOT_MODEL ?? "claude-opus-4-8";
+// Modèle configurable. Défaut : Haiku 4.5 (rapide et économique pour un
+// chatbot public). Passer une autre valeur via ANSET_CHATBOT_MODEL si besoin.
+const MODEL = process.env.ANSET_CHATBOT_MODEL ?? "claude-haiku-4-5";
 
 const MAX_MESSAGES = 20; // borne l'historique renvoyé (coût / abus)
 const MAX_CHARS = 2000; // longueur max d'un message utilisateur
+
+// Rate limiting : 15 messages / minute par IP.
+const RATE_LIMIT = 15;
+const RATE_WINDOW_MS = 60_000;
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -37,7 +43,10 @@ Règles impératives :
 - N'invente aucun partenariat ni aucun produit hors de la liste ci-dessus.
 - Tu n'as pas accès aux données personnelles ni aux contrats des clients. Pour toute demande sur un dossier existant, un sinistre ou une résiliation, invite à prendre rendez-vous ou à écrire à ${CONTACT.email}.
 - Reste sur le sujet de l'assurance et d'ANSET. Si la question est hors sujet, recadre poliment.
-- Tu prépares la mise en relation avec un conseiller humain quand c'est pertinent ; tu ne conclus pas de contrat toi-même.`;
+- Tu prépares la mise en relation avec un conseiller humain quand c'est pertinent ; tu ne conclus pas de contrat toi-même.
+
+Base de connaissances (source de vérité à privilégier pour les détails de garanties, conditions et procédures ; ne va jamais au-delà de ce qu'elle contient) :
+${getReference() || "(aucune fiche de référence disponible pour le moment)"}`;
 }
 
 function sanitize(messages: unknown): ChatMessage[] | null {
@@ -62,6 +71,15 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { error: "Configuration manquante (ANTHROPIC_API_KEY)." },
       { status: 500 },
+    );
+  }
+
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  const limit = rateLimit(`chat:${ip}`, RATE_LIMIT, RATE_WINDOW_MS);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Trop de messages. Merci de patienter un instant." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfter) } },
     );
   }
 

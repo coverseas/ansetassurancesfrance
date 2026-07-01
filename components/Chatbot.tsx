@@ -42,6 +42,17 @@ export function Chatbot() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: history }),
       });
+      if (res.status === 429) {
+        setMessages((prev) => {
+          const copy = [...prev];
+          copy[copy.length - 1] = {
+            role: "assistant",
+            content: "Vous m'écrivez un peu vite 😊 Merci de patienter quelques secondes avant de renvoyer un message.",
+          };
+          return copy;
+        });
+        return;
+      }
       if (!res.ok || !res.body) throw new Error("request failed");
 
       const reader = res.body.getReader();
