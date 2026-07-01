@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Cat, PawPrint, Stethoscope, Calendar, Shield, FileCheck, AlertCircle, CalendarClock, MapPin, Check, X } from "lucide-react";
 import { CALENDLY } from "@/lib/constants";
+import CoverseasSubscription from "@/components/CoverseasSubscription";
 
 export const metadata: Metadata = {
   title: "Santé chien & chat · ANSET Assurances",
@@ -44,7 +45,7 @@ export default function SanteChienChatPage() {
             Deux formules pour protéger votre animal contre les accidents, et — si vous le souhaitez — contre les maladies. Souscription en ligne en quelques minutes, remboursement après envoi des justificatifs, résiliable à tout moment après un an.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/bientot?produit=sante-animale" className={ctaPrimaryCls}>
+            <Link href="#souscription" className={ctaPrimaryCls}>
               Obtenir mon devis
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
@@ -132,6 +133,22 @@ export default function SanteChienChatPage() {
               <span className="text-2xl md:text-3xl font-black mr-2">2 000€ TTC</span> remboursés par année d'assurance, dont 1 600€ pour les frais de soins et 400€ pour les médicaments.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* TUNNEL DE SOUSCRIPTION */}
+      <section id="souscription" className="scroll-mt-24 py-14 md:py-18 bg-anset-mist/30 border-y border-anset-blue/10">
+        <div className="container-anset max-w-4xl">
+          <div className="text-center mb-8">
+            <p className={sectionLabelCls}>Souscription en ligne</p>
+            <h2 className={sectionTitleCls}>
+              Assurez votre compagnon <span className="text-anset-moutarde-dark">en quelques minutes</span>.
+            </h2>
+            <p className="text-sm md:text-base text-anset-slate leading-relaxed font-medium max-w-2xl mx-auto mt-3">
+              Renseignez les informations sur votre animal, choisissez votre formule et signez en ligne. Un conseiller reste disponible si vous avez la moindre question.
+            </p>
+          </div>
+          <CoverseasSubscription title="Souscription assurance santé chien & chat" />
         </div>
       </section>
 
@@ -467,7 +484,7 @@ export default function SanteChienChatPage() {
             Sans engagement. Vous découvrirez le tarif exact selon le profil de votre animal.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/bientot?produit=sante-animale" className="inline-flex items-center justify-center gap-2 bg-white text-anset-blue text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-anset-mist transition-colors">
+            <Link href="#souscription" className="inline-flex items-center justify-center gap-2 bg-white text-anset-blue text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-anset-mist transition-colors">
               Démarrer mon devis
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
