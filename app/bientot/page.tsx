@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Cat, Bike, Globe, User, ArrowLeft, Bell, Headphones } from "lucide-react";
+import { Cat, Bike, Globe, Home, Car, KeyRound, HeartPulse, User, ArrowLeft, Bell, Headphones } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CONTACT, CALENDLY } from "@/lib/constants";
@@ -51,6 +51,42 @@ const PRODUCTS: Record<string, ProductInfo> = {
     iconBg: "bg-anset-menthe",
     textColor: "text-anset-menthe-dark",
     porteur: "Risque porté par notre partenaire voyage spécialiste",
+  },
+  "habitation": {
+    name: "Assurance habitation",
+    type: "souscription",
+    icon: Home,
+    bgGradient: "from-anset-lilas-soft to-white",
+    iconBg: "bg-anset-lilas",
+    textColor: "text-anset-lilas-dark",
+    porteur: "Risque porté par Acheel",
+  },
+  "auto": {
+    name: "Assurance auto",
+    type: "souscription",
+    icon: Car,
+    bgGradient: "from-anset-menthe-soft to-white",
+    iconBg: "bg-anset-menthe",
+    textColor: "text-anset-menthe-dark",
+    porteur: "Risque porté par Acheel",
+  },
+  "pno": {
+    name: "Propriétaire non occupant (PNO)",
+    type: "souscription",
+    icon: KeyRound,
+    bgGradient: "from-anset-moutarde-soft to-white",
+    iconBg: "bg-anset-moutarde",
+    textColor: "text-anset-moutarde-dark",
+    porteur: "Risque porté par Acheel",
+  },
+  "sante": {
+    name: "Mutuelle santé",
+    type: "souscription",
+    icon: HeartPulse,
+    bgGradient: "from-anset-corail-soft to-white",
+    iconBg: "bg-anset-corail",
+    textColor: "text-anset-corail-dark",
+    porteur: "Risque porté par Acheel",
   },
   "espace-client": {
     name: "Espace client",

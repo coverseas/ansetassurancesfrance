@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Cat, Bike, Globe, ArrowRight } from "lucide-react";
+import { Cat, Bike, Home, Car, KeyRound, HeartPulse, ArrowRight } from "lucide-react";
 import { URLS } from "@/lib/constants";
 
 const OPTIONS = [
@@ -9,22 +9,37 @@ const OPTIONS = [
     slug: "sante-chien-chat",
     icon: Cat,
     label: "Mon chien ou mon chat",
-    price: "dès 12€/mois",
     url: URLS.souscriptionSanteAnimale,
   },
   {
     slug: "moto-cyclo",
     icon: Bike,
     label: "Ma moto, mon cyclo, mon scooter",
-    price: "dès 18€/mois",
     url: URLS.souscriptionMoto,
   },
   {
-    slug: "voyage",
-    icon: Globe,
-    label: "Mon voyage",
-    price: "dès 12€/voyage",
-    url: URLS.souscriptionVoyage,
+    slug: "habitation",
+    icon: Home,
+    label: "Mon logement",
+    url: URLS.souscriptionHabitation,
+  },
+  {
+    slug: "auto",
+    icon: Car,
+    label: "Ma voiture",
+    url: URLS.souscriptionAuto,
+  },
+  {
+    slug: "pno",
+    icon: KeyRound,
+    label: "Mon bien locatif (PNO)",
+    url: URLS.souscriptionPNO,
+  },
+  {
+    slug: "sante",
+    icon: HeartPulse,
+    label: "Ma mutuelle santé",
+    url: URLS.souscriptionSante,
   },
 ];
 
@@ -72,9 +87,6 @@ export function DevisSelector() {
               </div>
               <span className="flex-1 text-sm md:text-[15px] font-black text-anset-blue tracking-tight">
                 {option.label}
-              </span>
-              <span className="text-[11px] text-anset-slate font-bold hidden sm:inline">
-                {option.price}
               </span>
             </button>
           );

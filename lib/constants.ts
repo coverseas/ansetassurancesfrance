@@ -87,6 +87,10 @@ export const URLS = {
   souscriptionMoto: "/bientot?produit=moto",
   souscriptionMotoPro: "/bientot?produit=moto-pro",
   souscriptionVoyage: "/bientot?produit=voyage",
+  souscriptionHabitation: "/bientot?produit=habitation",
+  souscriptionAuto: "/bientot?produit=auto",
+  souscriptionPNO: "/bientot?produit=pno",
+  souscriptionSante: "/bientot?produit=sante",
   espaceClient: "/bientot?produit=espace-client",
 } as const;
 
