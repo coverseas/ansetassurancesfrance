@@ -6,24 +6,35 @@ const PARTNERS = [
     alt: "Groupama PJ",
     role: "Santé animale",
     height: 44,
+    blurred: false,
   },
   {
     src: "/images/partners/logo-mdm.svg",
     alt: "Mutuelle du Motard",
     role: "Moto & cyclo",
     height: 44,
+    blurred: false,
+  },
+  {
+    src: "/images/partners/logo-acheel.png",
+    alt: "Acheel",
+    role: "Auto · Habitation · Santé · PNO",
+    height: 34,
+    blurred: false,
   },
   {
     src: "/images/partners/logo-heyme.png",
     alt: "HEYME",
     role: "Voyage",
     height: 32,
+    blurred: true,
   },
   {
     src: "/images/partners/logo-ocirp.jpeg",
     alt: "OCIRP",
     role: "Emprunteur",
     height: 44,
+    blurred: true,
   },
 ];
 
@@ -39,14 +50,15 @@ export function TrustLogosStrip() {
             <div key={p.src} className="flex flex-col items-center gap-2.5">
               <Image
                 src={p.src}
-                alt={p.alt}
+                alt={p.blurred ? `${p.alt} — bientôt` : p.alt}
                 width={200}
                 height={p.height}
-                className="w-auto object-contain"
+                className={`w-auto object-contain ${p.blurred ? "blur-[3px] opacity-50 select-none pointer-events-none" : ""}`}
                 style={{ height: p.height }}
+                aria-hidden={p.blurred || undefined}
               />
               <span className="text-[10px] uppercase tracking-[1.5px] text-anset-slate/70 font-bold">
-                {p.role}
+                {p.blurred ? "Bientôt" : p.role}
               </span>
             </div>
           ))}
