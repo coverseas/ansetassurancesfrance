@@ -1,4 +1,4 @@
-import { Cat, Bike, Check, Zap } from "lucide-react";
+import { Cat, Bike, Car, Home, KeyRound, HeartPulse, Check, Zap, Clock } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { LeafPattern } from "@/components/ui/LeafPattern";
@@ -7,11 +7,19 @@ import { PRODUCTS, URLS } from "@/lib/constants";
 const iconMap: Record<string, LucideIcon> = {
   cat: Cat,
   motorbike: Bike,
+  car: Car,
+  home: Home,
+  key: KeyRound,
+  "heart-pulse": HeartPulse,
 };
 
 const productUrlMap: Record<string, string> = {
   "sante-chien-chat": URLS.souscriptionSanteAnimale,
   "moto-cyclo": URLS.souscriptionMoto,
+  auto: URLS.souscriptionAuto,
+  habitation: URLS.souscriptionHabitation,
+  pno: URLS.souscriptionPNO,
+  sante: URLS.souscriptionSante,
 };
 
 const colorThemes = {
@@ -36,6 +44,13 @@ const colorThemes = {
     tagText: "text-anset-menthe-dark",
     glowColor: "rgba(119,170,146,0.3)",
   },
+  lilas: {
+    bgGradient: "bg-gradient-to-br from-anset-lilas-soft via-anset-lilas-soft/60 to-anset-lilas/30",
+    leafColor: "var(--anset-lilas)",
+    iconColor: "text-anset-lilas",
+    tagText: "text-anset-lilas-dark",
+    glowColor: "rgba(113,86,137,0.3)",
+  },
 } as const;
 
 export function ProductsSection() {
@@ -45,14 +60,14 @@ export function ProductsSection() {
       <div className="container-anset py-20 md:py-28 relative z-10">
         <div className="max-w-2xl mb-12 md:mb-16">
           <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-corail mb-3">
-            Nos offres dès le lancement
+            Nos assurances
           </p>
           <h2 className="text-3xl md:text-[40px] lg:text-[48px] text-anset-blue tracking-[-0.035em] leading-[1.05] font-black">
-            Nos premières assurances <span className="accent">pour vous</span>.
+            Une assurance <span className="accent">pour chaque besoin</span>.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {PRODUCTS.map((product) => {
             const Icon = iconMap[product.icon];
             const theme = colorThemes[product.color];
@@ -76,24 +91,31 @@ export function ProductsSection() {
                     {product.category}
                   </span>
 
-                  {product.onlineSubscription && (
+                  {product.comingSoon ? (
+                    <span className="absolute top-4 right-4 bg-anset-blue/85 text-white px-2.5 py-1.5 rounded-md text-[10px] font-black tracking-[0.8px] flex items-center gap-1 z-10 shadow-premium-sm">
+                      <Clock className="w-3 h-3" aria-hidden="true" />
+                      BIENTÔT
+                    </span>
+                  ) : product.onlineSubscription ? (
                     <span className="absolute top-4 right-4 bg-anset-blue text-white px-2.5 py-1.5 rounded-md text-[10px] font-black tracking-[0.8px] flex items-center gap-1 z-10 shadow-premium-sm">
                       <Zap className="w-3 h-3" aria-hidden="true" />
                       EN LIGNE
                     </span>
-                  )}
+                  ) : null}
 
                   <div className="relative z-10 bg-white w-20 h-20 rounded-full flex items-center justify-center shadow-premium-lg">
                     {Icon && <Icon className={`w-10 h-10 ${theme.iconColor}`} strokeWidth={1.5} aria-hidden="true" />}
                   </div>
 
-                  <div className="absolute bottom-4 right-4 bg-white/97 px-3 py-2 rounded-lg flex items-baseline gap-0.5 z-10 shadow-premium-sm">
-                    <span className="text-[9px] text-anset-slate font-bold">dès</span>
-                    <span className="text-lg font-black text-anset-blue tracking-tight">
-                      {product.priceFrom}{product.priceCurrency}
-                    </span>
-                    <span className="text-[10px] text-anset-slate font-bold">{product.pricePeriod}</span>
-                  </div>
+                  {!product.comingSoon && (
+                    <div className="absolute bottom-4 right-4 bg-white/97 px-3 py-2 rounded-lg flex items-baseline gap-0.5 z-10 shadow-premium-sm">
+                      <span className="text-[9px] text-anset-slate font-bold">dès</span>
+                      <span className="text-lg font-black text-anset-blue tracking-tight">
+                        {product.priceFrom}{product.priceCurrency}
+                      </span>
+                      <span className="text-[10px] text-anset-slate font-bold">{product.pricePeriod}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6 md:p-7 flex flex-col gap-3 flex-1">
@@ -113,7 +135,7 @@ export function ProductsSection() {
                   </ul>
                   <div className="flex gap-2 mt-2">
                     <Button as="a" href={url} variant="secondary" size="md" className="flex-1">
-                      Mon devis
+                      {product.comingSoon ? "Être prévenu" : "Mon devis"}
                     </Button>
                     <Button as="a" href={`/produits/${product.slug}`} variant="ghost" size="md" className="flex-1">
                       Détails
