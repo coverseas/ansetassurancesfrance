@@ -44,13 +44,6 @@ const colorThemes = {
     tagText: "text-anset-menthe-dark",
     glowColor: "rgba(119,170,146,0.3)",
   },
-  lilas: {
-    bgGradient: "bg-gradient-to-br from-anset-lilas-soft via-anset-lilas-soft/60 to-anset-lilas/30",
-    leafColor: "var(--anset-lilas)",
-    iconColor: "text-anset-lilas",
-    tagText: "text-anset-lilas-dark",
-    glowColor: "rgba(113,86,137,0.3)",
-  },
 } as const;
 
 export function ProductsSection() {

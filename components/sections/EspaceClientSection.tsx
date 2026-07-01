@@ -81,7 +81,7 @@ export function EspaceClientSection() {
             </div>
 
             <div className="flex items-center gap-2.5 pt-2">
-              <div className="w-7 h-7 rounded-lg bg-anset-lilas flex items-center justify-center flex-shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-anset-moutarde flex items-center justify-center flex-shrink-0">
                 <Home className="w-3.5 h-3.5 text-white" aria-hidden="true" />
               </div>
               <div className="flex-1">

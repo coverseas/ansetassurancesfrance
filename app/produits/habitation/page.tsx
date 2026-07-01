@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const data: ProductLandingData = {
-  color: "lilas",
+  color: "moutarde",
   icon: Home,
   pillText: "Habitation · Avec Acheel",
   title: "Votre logement protégé,",

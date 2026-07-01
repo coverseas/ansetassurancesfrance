@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const data: ProductLandingData = {
-  color: "menthe",
+  color: "moutarde",
   icon: Car,
   pillText: "Auto · Avec Acheel",
   title: "Votre voiture assurée,",
