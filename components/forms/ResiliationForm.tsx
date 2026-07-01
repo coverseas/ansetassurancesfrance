@@ -82,7 +82,6 @@ export default function ResiliationForm() {
           <option value="">— Choisissez —</option>
           <option value="sante-animale">Santé chien-chat</option>
           <option value="moto-cyclo">Moto et cyclo</option>
-          <option value="voyage">Voyage</option>
           <option value="autre">Autre</option>
         </select>
       </div>

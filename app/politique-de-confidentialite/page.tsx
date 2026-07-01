@@ -33,7 +33,7 @@ export default function PolitiqueConfidentialitePage() {
       <p>Nous collectons et traitons les catégories de données suivantes :</p>
       <ul>
         <li><strong>Données d'identification</strong> : nom, prénom, date de naissance, adresse postale, email, téléphone.</li>
-        <li><strong>Données liées aux biens ou risques à assurer</strong> : informations sur l'animal (espèce, race, âge), sur le véhicule (marque, modèle, immatriculation), sur le voyage (destinations, durée), etc.</li>
+        <li><strong>Données liées aux biens ou risques à assurer</strong> : informations sur l'animal (espèce, race, âge), sur le véhicule (marque, modèle, immatriculation), sur le logement (adresse, surface), etc.</li>
         <li><strong>Données contractuelles</strong> : devis demandés, contrats souscrits, sinistres déclarés, échanges avec nos conseillers et avec Poé.</li>
         <li><strong>Données de connexion</strong> : adresse IP, type de navigateur, pages consultées, durée de visite.</li>
       </ul>
@@ -61,7 +61,7 @@ export default function PolitiqueConfidentialitePage() {
       <h2>5. Destinataires</h2>
       <p>Vos données peuvent être communiquées :</p>
       <ul>
-        <li>À nos assureurs partenaires porteurs de risque : Groupama PJ, Mutuelle du Motard, HEYME, OCIRP, dans le cadre de l'instruction et de la gestion de vos contrats.</li>
+        <li>À nos assureurs partenaires porteurs de risque : Groupama PJ, Mutuelle du Motard, Acheel, OCIRP, dans le cadre de l'instruction et de la gestion de vos contrats.</li>
         <li>À nos prestataires techniques (hébergement, outils de gestion), qui agissent en qualité de sous-traitants conformément à l'article 28 du RGPD.</li>
         <li>Aux autorités administratives ou judiciaires habilitées (ACPR, TRACFIN, justice) dans le cadre d'obligations légales.</li>
       </ul>

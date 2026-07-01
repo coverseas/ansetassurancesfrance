@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Cat, Bike, Globe, Home, Car, KeyRound, HeartPulse, User, ArrowLeft, Bell, Headphones } from "lucide-react";
+import { Cat, Bike, Home, Car, KeyRound, HeartPulse, User, ArrowLeft, Bell, Headphones } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CONTACT, CALENDLY } from "@/lib/constants";
@@ -42,15 +42,6 @@ const PRODUCTS: Record<string, ProductInfo> = {
     iconBg: "bg-anset-moutarde",
     textColor: "text-anset-moutarde-dark",
     porteur: "Risque porté par la Mutuelle du Motard",
-  },
-  "voyage": {
-    name: "Voyage & rapatriement",
-    type: "souscription",
-    icon: Globe,
-    bgGradient: "from-anset-menthe-soft to-white",
-    iconBg: "bg-anset-menthe",
-    textColor: "text-anset-menthe-dark",
-    porteur: "Risque porté par notre partenaire voyage spécialiste",
   },
   "habitation": {
     name: "Assurance habitation",

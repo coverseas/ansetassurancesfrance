@@ -86,7 +86,6 @@ export const URLS = {
   souscriptionSanteAnimale: "/bientot?produit=sante-animale",
   souscriptionMoto: "/bientot?produit=moto",
   souscriptionMotoPro: "/bientot?produit=moto-pro",
-  souscriptionVoyage: "/bientot?produit=voyage",
   souscriptionHabitation: "/bientot?produit=habitation",
   souscriptionAuto: "/bientot?produit=auto",
   souscriptionPNO: "/bientot?produit=pno",
@@ -143,27 +142,6 @@ export const PRODUCTS = [
     ],
     onlineSubscription: false,
   },
-  {
-    slug: "voyage",
-    universe: "voyage",
-    name: "Voyage & rapatriement",
-    shortName: "Voyage",
-    category: "MES VOYAGES",
-    color: "corail",
-    icon: "world",
-    porteurMention: "Risque porté par HEYME",
-    audience: "Particuliers",
-    priceFrom: 12,
-    priceCurrency: "€",
-    pricePeriod: "/voyage",
-    description: "L'esprit léger, partout dans le monde.",
-    features: [
-      "Annulation, bagages, médical",
-      "Souscription 100% en ligne",
-      "Module rapatriement très bientôt",
-    ],
-    onlineSubscription: true,
-  },
 ] as const;
 
 export const ROADMAP = [
@@ -172,13 +150,6 @@ export const ROADMAP = [
     name: "Assurance emprunteur",
     icon: "banknote",
     universe: "famille" as const,
-    status: "Très bientôt",
-  },
-  {
-    slug: "rapatriement",
-    name: "Assistance rapatriement",
-    icon: "shield-plus",
-    universe: "voyage" as const,
     status: "Très bientôt",
   },
   {
@@ -231,7 +202,7 @@ export const STATS = [
 export const TEAM_MEMBERS = [
   { name: "Vaiana", role: "Conseillère outre-mer" },
   { name: "Patrick", role: "Conseiller moto pro" },
-  { name: "Léa", role: "Conseillère voyage" },
+  { name: "Léa", role: "Conseillère auto & habitation" },
 ] as const;
 
 export const HOWTO_STEPS = [
@@ -306,7 +277,7 @@ export const TESTIMONIALS = [
     featured: false,
   },
   {
-    quote: "Voyage à Maurice souscrit en 5 min depuis mon canapé. Bagage perdu remboursé sans batailler.",
+    quote: "Assurance habitation et auto regroupées chez ANSET. Un seul interlocuteur qui connaît mon dossier, et un tarif plus juste qu'avant.",
     name: "Maeva K.",
     location: "Bobigny (93)",
     avatarTone: "warm" as const,
@@ -350,7 +321,6 @@ export const NAV_STRUCTURE: Array<{
     submenu: [
       { label: "Santé chien-chat", href: "/produits/sante-chien-chat", description: "Avec Groupama PJ" },
       { label: "Moto et cyclo", href: "/produits/moto-cyclo", description: "Avec Mutuelle du Motard" },
-      { label: "Voyage et rapatriement", href: "/produits/voyage", description: "Avec HEYME" },
     ],
   },
   {

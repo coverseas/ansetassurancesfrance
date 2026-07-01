@@ -40,7 +40,6 @@ async function sendBrevoEmail(payload: BrevoEmailPayload) {
 const contractTypeLabel: Record<string, string> = {
   "sante-animale": "Santé chien-chat",
   "moto-cyclo": "Moto et cyclo",
-  "voyage": "Voyage",
   "autre": "Autre",
 };
 

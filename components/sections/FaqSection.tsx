@@ -5,7 +5,7 @@ import { ChevronDown, MessageCircle, CalendarClock } from "lucide-react";
 const FAQS = [
   {
     q: "Quels produits puis-je souscrire dès aujourd'hui ?",
-    a: "Trois assurances sont accessibles immédiatement : la santé pour votre chien ou votre chat (portée par Groupama PJ), l'assurance moto, cyclo et scooter (Mutuelle du Motard), et l'assurance voyage & rapatriement (HEYME). L'assurance emprunteur, portée par OCIRP, ouvre très bientôt. D'autres produits suivront tout au long de 2026.",
+    a: "Deux assurances sont accessibles immédiatement : la santé pour votre chien ou votre chat (portée par Groupama PJ) et l'assurance moto, cyclo et scooter (Mutuelle du Motard). Nos offres auto, habitation, PNO et santé (avec Acheel) ainsi que l'assurance emprunteur ouvrent très bientôt. D'autres produits suivront tout au long de 2026.",
   },
   {
     q: "Comment obtenir un devis ?",
@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: "Qui porte les risques et avec qui suis-je en relation ?",
-    a: "ANSET ASSURANCES est la marque commerciale de Coverseas SASU, courtier d'assurances immatriculé à l'ORIAS sous le numéro 26000597 et soumis au contrôle de l'ACPR. Les risques sont portés par nos assureurs partenaires : Groupama PJ pour la santé animale, la Mutuelle du Motard pour le moto-cyclo, HEYME pour le voyage, OCIRP pour l'emprunteur. Notre responsabilité civile professionnelle et notre garantie financière sont assurées par Liberty Mutual Insurance Europe SE.",
+    a: "ANSET ASSURANCES est la marque commerciale de Coverseas SASU, courtier d'assurances immatriculé à l'ORIAS sous le numéro 26000597 et soumis au contrôle de l'ACPR. Les risques sont portés par nos assureurs partenaires : Groupama PJ pour la santé animale, la Mutuelle du Motard pour le moto-cyclo, Acheel pour l'auto, l'habitation, le PNO et la santé, OCIRP pour l'emprunteur. Notre responsabilité civile professionnelle et notre garantie financière sont assurées par Liberty Mutual Insurance Europe SE.",
   },
 ];
 

@@ -1,4 +1,4 @@
-import { Cat, Bike, Globe, Check, Bell } from "lucide-react";
+import { Cat, Bike, Home, Check, Bell } from "lucide-react";
 import { LeafPattern } from "@/components/ui/LeafPattern";
 import { Button } from "@/components/ui/Button";
 import { URLS } from "@/lib/constants";
@@ -81,15 +81,15 @@ export function EspaceClientSection() {
             </div>
 
             <div className="flex items-center gap-2.5 pt-2">
-              <div className="w-7 h-7 rounded-lg bg-anset-menthe flex items-center justify-center flex-shrink-0">
-                <Globe className="w-3.5 h-3.5 text-white" aria-hidden="true" />
+              <div className="w-7 h-7 rounded-lg bg-anset-lilas flex items-center justify-center flex-shrink-0">
+                <Home className="w-3.5 h-3.5 text-white" aria-hidden="true" />
               </div>
               <div className="flex-1">
-                <div className="text-[9.5px] font-black text-anset-blue">Voyage Maurice</div>
-                <div className="text-[8.5px] text-anset-slate font-semibold mt-0.5">12 au 26 oct. · Actif</div>
+                <div className="text-[9.5px] font-black text-anset-blue">Appartement · Nanterre</div>
+                <div className="text-[8.5px] text-anset-slate font-semibold mt-0.5">Multirisque habitation · Actif</div>
               </div>
               <div className="text-[11px] font-black text-anset-blue">
-                38€<span className="text-[8px] text-anset-slate font-bold">/total</span>
+                18€<span className="text-[8px] text-anset-slate font-bold">/mois</span>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function CGUPage() {
       <h2>Article 3 — Services proposés</h2>
       <p>Le site permet aux utilisateurs de :</p>
       <ul>
-        <li>Consulter notre offre d'assurance (santé chien/chat, moto, voyage, et autres produits à venir).</li>
+        <li>Consulter notre offre d'assurance (santé chien/chat, moto, et autres produits à venir).</li>
         <li>Demander un devis personnalisé via notre formulaire en ligne ou notre agente IA Poé.</li>
         <li>Échanger avec nos conseillers humains.</li>
         <li>Souscrire à terme un contrat d'assurance (en ligne pour certains produits, via conseiller pour d'autres).</li>

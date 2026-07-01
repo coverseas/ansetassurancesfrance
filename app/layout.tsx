@@ -16,17 +16,20 @@ export const metadata: Metadata = {
     template: "%s · ANSET Assurances",
   },
   description:
-    "ANSET Assurances. 25 ans d'expertise en outre-mer, désormais en métropole. Santé chien-chat avec Groupama, moto-cyclo avec la Mutuelle du Motard, voyage et rapatriement. Devis 2 minutes, conseillers humains 6j/7, Poé 24h/24.",
+    "ANSET Assurances. 25 ans d'expertise en outre-mer, désormais en métropole. Santé chien-chat avec Groupama, moto-cyclo avec la Mutuelle du Motard, auto, habitation, PNO et santé avec Acheel. Devis 2 minutes, conseillers humains 6j/7, Poé 24h/24.",
   keywords: [
     "assurance chien chat",
     "assurance moto",
-    "assurance voyage",
+    "assurance auto",
+    "assurance habitation",
+    "assurance PNO",
+    "assurance santé",
     "assurance outre-mer",
     "ANSET",
     "Coverseas",
     "Groupama Protection Juridique",
     "Mutuelle du Motard",
-    "HEYME",
+    "Acheel",
   ],
   authors: [{ name: "COVERSEAS" }],
   creator: "COVERSEAS",
@@ -77,7 +80,7 @@ const organizationJsonLd = {
   logo: `${SITE_URL}/images/logo-anset.png`,
   image: `${SITE_URL}/opengraph-image`,
   description:
-    "Courtier en assurances. Santé animale, moto, voyage. Une marque de COVERSEAS SASU, immatriculée à l'ORIAS sous le numéro 26000597.",
+    "Courtier en assurances. Santé animale, moto, auto, habitation. Une marque de COVERSEAS SASU, immatriculée à l'ORIAS sous le numéro 26000597.",
   address: {
     "@type": "PostalAddress",
     streetAddress: COMPANY.address.street,

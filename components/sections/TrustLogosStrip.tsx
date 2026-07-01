@@ -23,13 +23,6 @@ const PARTNERS = [
     blurred: false,
   },
   {
-    src: "/images/partners/logo-heyme.png",
-    alt: "HEYME",
-    role: "Voyage",
-    height: 32,
-    blurred: true,
-  },
-  {
     src: "/images/partners/logo-ocirp.jpeg",
     alt: "OCIRP",
     role: "Emprunteur",

@@ -1,4 +1,4 @@
-import { Cat, Bike, Globe, Check, Zap } from "lucide-react";
+import { Cat, Bike, Check, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { LeafPattern } from "@/components/ui/LeafPattern";
@@ -7,13 +7,11 @@ import { PRODUCTS, URLS } from "@/lib/constants";
 const iconMap: Record<string, LucideIcon> = {
   cat: Cat,
   motorbike: Bike,
-  world: Globe,
 };
 
 const productUrlMap: Record<string, string> = {
   "sante-chien-chat": URLS.souscriptionSanteAnimale,
   "moto-cyclo": URLS.souscriptionMoto,
-  voyage: URLS.souscriptionVoyage,
 };
 
 const colorThemes = {
@@ -47,14 +45,14 @@ export function ProductsSection() {
       <div className="container-anset py-20 md:py-28 relative z-10">
         <div className="max-w-2xl mb-12 md:mb-16">
           <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-corail mb-3">
-            Trois offres dès le lancement
+            Nos offres dès le lancement
           </p>
           <h2 className="text-3xl md:text-[40px] lg:text-[48px] text-anset-blue tracking-[-0.035em] leading-[1.05] font-black">
             Nos premières assurances <span className="accent">pour vous</span>.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-3xl">
           {PRODUCTS.map((product) => {
             const Icon = iconMap[product.icon];
             const theme = colorThemes[product.color];

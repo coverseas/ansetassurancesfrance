@@ -38,7 +38,6 @@ export function Footer() {
             <p className={colTitleCls}>Nos assurances</p>
             <Link href="/bientot?produit=sante-animale" className={linkCls}>Santé chien & chat</Link>
             <Link href="/bientot?produit=moto" className={linkCls}>Moto & cyclo</Link>
-            <Link href="/bientot?produit=voyage" className={linkCls}>Voyage</Link>
             <Link href="/bientot?produit=emprunteur" className={linkCls}>Emprunteur</Link>
           </div>
 

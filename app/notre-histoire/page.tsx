@@ -114,7 +114,7 @@ export default function NotreHistoirePage() {
               <div>
                 <h3 className={milestoneTitleCls}>Le retour en métropole</h3>
                 <p className={milestoneTextCls}>
-                  Vingt-six ans après la naissance d'ANSET à Tahiti, la marque arrive en France métropolitaine, portée par Coverseas SASU. Trois assurances accessibles dès maintenant : santé chien & chat avec Groupama PJ, moto et cyclo avec la Mutuelle du Motard, voyage avec HEYME. L'assurance emprunteur, portée par OCIRP, arrive très bientôt. D'autres produits suivront tout au long de 2026.
+                  Vingt-six ans après la naissance d'ANSET à Tahiti, la marque arrive en France métropolitaine, portée par Coverseas SASU. Deux assurances accessibles dès maintenant : santé chien & chat avec Groupama PJ, moto et cyclo avec la Mutuelle du Motard. Les offres auto, habitation, PNO et santé avec Acheel, ainsi que l'assurance emprunteur portée par OCIRP, arrivent très bientôt. D'autres produits suivront tout au long de 2026.
                 </p>
               </div>
             </div>
