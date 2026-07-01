@@ -53,7 +53,7 @@ export function TrustLogosStrip() {
                 alt={p.blurred ? `${p.alt} — bientôt` : p.alt}
                 width={200}
                 height={p.height}
-                className={`w-auto object-contain ${p.blurred ? "blur-[3px] opacity-50 select-none pointer-events-none" : ""}`}
+                className={`w-auto object-contain ${p.blurred ? "blur-[7px] opacity-40 select-none pointer-events-none" : ""}`}
                 style={{ height: p.height }}
                 aria-hidden={p.blurred || undefined}
               />
