@@ -79,7 +79,7 @@ export default function CGUPage() {
       <h2>Article 10 — Contact</h2>
       <p>
         Pour toute question relative aux présentes CGU :<br />
-        Email : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        Email : <a href={CONTACT.emailLegalHref}>{CONTACT.emailLegal}</a>
       </p>
     </LegalPageLayout>
   );

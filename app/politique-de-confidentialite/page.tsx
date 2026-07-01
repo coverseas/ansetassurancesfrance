@@ -26,7 +26,7 @@ export default function PolitiqueConfidentialitePage() {
       </p>
       <p>
         Pour toute question relative au traitement de vos données :<br />
-        Email : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        Email : <a href={CONTACT.emailDpoHref}>{CONTACT.emailDpo}</a>
       </p>
 
       <h2>2. Données collectées</h2>
@@ -93,7 +93,7 @@ export default function PolitiqueConfidentialitePage() {
         <li><strong>Droit de définir des directives</strong> relatives au sort de vos données après votre décès.</li>
       </ul>
       <p>
-        Pour exercer ces droits : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> ou par courrier à notre siège.
+        Pour exercer ces droits : <a href={CONTACT.emailDpoHref}>{CONTACT.emailDpo}</a> ou par courrier à notre siège.
       </p>
 
       <h2>9. Réclamation auprès de la CNIL</h2>

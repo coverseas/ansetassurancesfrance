@@ -49,12 +49,14 @@ export const COMPANY = {
 } as const;
 
 export const CONTACT = {
-  email: "contact@coverseas.fr",
-  emailHref: "mailto:contact@coverseas.fr",
+  email: "hello@ansetassurances.com",
+  emailHref: "mailto:hello@ansetassurances.com",
+  emailLegal: "contact@coverseas.fr",
+  emailLegalHref: "mailto:contact@coverseas.fr",
   emailReclamations: "contact@coverseas.fr",
   emailReclamationsHref: "mailto:contact@coverseas.fr",
-  emailDpo: "contact@coverseas.fr",
-  emailDpoHref: "mailto:contact@coverseas.fr",
+  emailDpo: "dpo@coverseas.fr",
+  emailDpoHref: "mailto:dpo@coverseas.fr",
   hours: "Lundi au samedi · 9h-19h",
   hoursDetailed: [
     { day: "Lundi - Vendredi", time: "9h - 19h" },

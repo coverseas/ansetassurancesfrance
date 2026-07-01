@@ -56,7 +56,7 @@ export default function CookiesPage() {
       </p>
 
       <h2>Contact</h2>
-      <p>Pour toute question : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+      <p>Pour toute question : <a href={CONTACT.emailLegalHref}>{CONTACT.emailLegal}</a></p>
     </LegalPageLayout>
   );
 }
