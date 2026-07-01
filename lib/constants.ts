@@ -321,6 +321,10 @@ export const NAV_STRUCTURE: Array<{
     submenu: [
       { label: "Santé chien-chat", href: "/produits/sante-chien-chat", description: "Avec Groupama PJ" },
       { label: "Moto et cyclo", href: "/produits/moto-cyclo", description: "Avec Mutuelle du Motard" },
+      { label: "Assurance auto", href: "/produits/auto", description: "Avec Acheel" },
+      { label: "Assurance habitation", href: "/produits/habitation", description: "Avec Acheel" },
+      { label: "Propriétaire non occupant (PNO)", href: "/produits/pno", description: "Avec Acheel" },
+      { label: "Mutuelle santé", href: "/produits/sante", description: "Avec Acheel" },
     ],
   },
   {
