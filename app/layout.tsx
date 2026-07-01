@@ -5,6 +5,7 @@ import { sonnyGothic, inter } from "./fonts";
 import "./globals.css";
 import { CookieBanner } from "@/components/CookieBanner";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { Chatbot } from "@/components/Chatbot";
 import { COMPANY, CONTACT } from "@/lib/constants";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ansetassurances.com";
@@ -112,6 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />        <CookieBanner />
         <StickyMobileCTA />
+        <Chatbot />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

@@ -12,7 +12,6 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { StorySection } from "@/components/sections/StorySection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { RoadmapSection } from "@/components/sections/RoadmapSection";
-import { Chatbot } from "@/components/Chatbot";
 
 export default function HomePage() {
   return (
@@ -31,7 +30,6 @@ export default function HomePage() {
       <StorySection />
       <FaqSection />
       <RoadmapSection />
-      <Chatbot />
     </>
   );
 }
