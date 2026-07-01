@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Phone, User, Menu, X, ChevronDown } from "lucide-react";
+import { CalendarClock, User, Menu, X, ChevronDown } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
-import { CONTACT, NAV_STRUCTURE, URLS } from "@/lib/constants";
+import { CALENDLY, NAV_STRUCTURE, URLS } from "@/lib/constants";
 
 const linkCls = "nav-link-anim text-[12px] font-semibold text-anset-blue hover:text-anset-corail transition-colors duration-200";
-const phoneCls = "hidden md:flex items-center gap-1.5 text-[12px] font-bold text-anset-blue hover:text-anset-corail transition-colors duration-200 pl-3 border-l border-anset-blue/15";
+const rdvCls = "hidden md:flex items-center gap-1.5 text-[12px] font-bold text-anset-blue hover:text-anset-corail transition-colors duration-200 pl-3 border-l border-anset-blue/15";
 const espaceCls = "hidden md:flex items-center gap-1.5 text-[12px] font-bold text-anset-blue px-3.5 py-2 border-[1.5px] border-anset-blue/20 rounded-md hover:border-anset-blue hover:bg-anset-blue hover:text-white transition-all duration-200";
 const dropdownPanelCls = "bg-white rounded-xl shadow-[0_8px_32px_rgba(16,46,93,0.12)] border border-anset-blue/10 p-3 min-w-[280px]";
 const dropdownItemCls = "block px-3 py-2.5 rounded-lg hover:bg-anset-mist/60 transition-colors";
@@ -81,10 +81,10 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2.5">
-            <a href={CONTACT.phoneHref} className={phoneCls}>
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              {CONTACT.phoneDisplay}
-            </a>
+            <Link href={CALENDLY.sectionHref} className={rdvCls}>
+              <CalendarClock className="h-4 w-4" aria-hidden="true" />
+              {CALENDLY.label}
+            </Link>
             <a href={URLS.espaceClient} className={espaceCls}>
               <User className="h-4 w-4" aria-hidden="true" />
               Mon espace
@@ -142,10 +142,10 @@ export function Header() {
               })}
             </nav>
             <div className="border-t border-anset-blue/10 p-4 space-y-2">
-              <a href={CONTACT.phoneHref} className="flex items-center gap-2 px-4 py-2.5 text-sm font-bold text-anset-blue">
-                <Phone className="w-4 h-4" aria-hidden="true" />
-                {CONTACT.phoneDisplay}
-              </a>
+              <Link href={CALENDLY.sectionHref} onClick={closeMobile} className="flex items-center gap-2 px-4 py-2.5 text-sm font-bold text-anset-blue">
+                <CalendarClock className="w-4 h-4" aria-hidden="true" />
+                {CALENDLY.label}
+              </Link>
               <a href={URLS.espaceClient} className="flex items-center gap-2 px-4 py-2.5 text-sm font-bold text-anset-blue border border-anset-blue/20 rounded-lg">
                 <User className="w-4 h-4" aria-hidden="true" />
                 Mon espace

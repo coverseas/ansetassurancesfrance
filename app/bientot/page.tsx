@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Cat, Bike, Globe, User, ArrowLeft, Bell, Headphones } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { CONTACT } from "@/lib/constants";
+import { CONTACT, CALENDLY } from "@/lib/constants";
 
 type ProductInfo = {
   name: string;
@@ -154,8 +154,8 @@ export default async function BientotPage({
               <p className="text-sm text-anset-slate font-medium mb-5 leading-relaxed flex-1">
                 Nos conseillers sont disponibles dès maintenant pour vous accompagner et préparer votre devis sur mesure.
               </p>
-              <Button as="a" href={CONTACT.phoneHref} variant="ghost" size="md" className="w-full">
-                Appeler le {CONTACT.phoneDisplay}
+              <Button as="a" href={CALENDLY.sectionHref} variant="ghost" size="md" className="w-full">
+                {CALENDLY.label}
               </Button>
             </div>
           </div>

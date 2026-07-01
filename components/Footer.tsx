@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { COMPANY, CONTACT } from "@/lib/constants";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { COMPANY, CONTACT, CALENDLY } from "@/lib/constants";
+import { CalendarClock, Mail, MapPin } from "lucide-react";
 
 const colTitleCls = "text-[10px] uppercase tracking-[2px] font-black text-white/70 mb-4";
 const linkCls = "block text-sm text-white/85 font-medium hover:text-white transition-colors mb-2.5";
@@ -60,10 +60,10 @@ export function Footer() {
 
           <div className="col-span-2 lg:col-span-2">
             <p className={colTitleCls}>Contact</p>
-            <a href={CONTACT.phoneHref} className={contactLinkCls}>
-              <Phone className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-              {CONTACT.phoneDisplay}
-            </a>
+            <Link href={CALENDLY.sectionHref} className={contactLinkCls}>
+              <CalendarClock className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" aria-hidden="true" />
+              {CALENDLY.label}
+            </Link>
             <a href={`mailto:${CONTACT.email}`} className={`${contactLinkCls} break-all`}>
               <Mail className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" aria-hidden="true" />
               {CONTACT.email}

@@ -1,13 +1,14 @@
 import Image from "next/image";
-import { CalendarHeart, Phone } from "lucide-react";
+import Link from "next/link";
+import { CalendarHeart, CalendarClock } from "lucide-react";
 import { LeafPattern } from "@/components/ui/LeafPattern";
 import { DevisSelector } from "@/components/ui/DevisSelector";
-import { CONTACT, TRUSTPILOT } from "@/lib/constants";
+import { CALENDLY, TRUSTPILOT } from "@/lib/constants";
 
 const pillCls = "inline-flex items-center gap-2 text-anset-corail-dark text-[11px] font-black uppercase tracking-[2.5px] mb-6";
 const headlineCls = "text-5xl md:text-6xl lg:text-[64px] xl:text-[72px] font-black text-anset-blue leading-[0.96] tracking-[-0.045em]";
 const descCls = "mt-6 text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-lg";
-const phoneLinkCls = "mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-anset-slate hover:text-anset-corail transition-colors w-fit";
+const rdvLinkCls = "mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-anset-slate hover:text-anset-corail transition-colors w-fit";
 const trustRowCls = "mt-7 pt-6 border-t border-anset-blue/10 flex flex-wrap items-center gap-x-7 gap-y-3";
 const photoCls = "relative rounded-[24px] overflow-hidden shadow-premium-lg min-h-[480px] lg:min-h-[640px] order-1 lg:order-2";
 
@@ -38,10 +39,10 @@ export function Hero() {
             <DevisSelector />
           </div>
 
-          <a href={CONTACT.phoneHref} className={phoneLinkCls}>
-            <Phone className="w-3.5 h-3.5" aria-hidden="true" />
-            Préférez parler à un conseiller ? Appelez-nous au <span className="text-anset-blue font-black">{CONTACT.phoneDisplay}</span>
-          </a>
+          <Link href={CALENDLY.sectionHref} className={rdvLinkCls}>
+            <CalendarClock className="w-3.5 h-3.5" aria-hidden="true" />
+            Préférez parler à un conseiller ? <span className="text-anset-blue font-black">Prenez rendez-vous en ligne</span>
+          </Link>
 
           <div className={trustRowCls}>
             <div className="flex items-center gap-2.5">

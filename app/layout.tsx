@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   formatDetection: {
-    telephone: true,
+    telephone: false,
     address: true,
     email: true,
   },
@@ -85,7 +85,6 @@ const organizationJsonLd = {
     addressLocality: COMPANY.address.city,
     addressCountry: "FR",
   },
-  telephone: CONTACT.phone,
   email: CONTACT.email,
   areaServed: [
     { "@type": "Country", name: "France" },

@@ -49,9 +49,6 @@ export const COMPANY = {
 } as const;
 
 export const CONTACT = {
-  phone: "09 75 12 34 56",
-  phoneDisplay: "09 75 12 34 56",
-  phoneHref: "tel:+33975123456",
   email: "contact@coverseas.fr",
   emailHref: "mailto:contact@coverseas.fr",
   emailReclamations: "contact@coverseas.fr",
@@ -64,6 +61,16 @@ export const CONTACT = {
     { day: "Samedi", time: "9h - 13h" },
     { day: "Dimanche", time: "Fermé" },
   ],
+} as const;
+
+export const CALENDLY = {
+  /**
+   * Lien de réservation Calendly. Alimente le calendrier intégré sur la page /contact.
+   */
+  url: "https://calendly.com/contact-coverseas/30min",
+  /** Ancre de la section calendrier sur la page contact — cible de tous les CTA "Prendre rendez-vous". */
+  sectionHref: "/contact#rendez-vous",
+  label: "Prendre rendez-vous",
 } as const;
 
 export const HOSTING = {
@@ -343,7 +350,7 @@ export const NAV_STRUCTURE: Array<{
   {
     label: "Mes démarches",
     submenu: [
-      { label: "Nous contacter", href: "/contact", description: "Téléphone, email, formulaire" },
+      { label: "Nous contacter", href: "/contact", description: "Rendez-vous, email, formulaire" },
       { label: "Dépôt de prise en charge santé animale", href: "/sinistre/sante-animale", description: "Remboursement de frais vétérinaires" },
       { label: "Faire une réclamation", href: "/contact#formulaire", description: "Mécontentement contractuel" },
       { label: "Résilier mon contrat", href: "/resiliation", description: "Procédure 3 clics" },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Cat, PawPrint, Stethoscope, Calendar, Shield, FileCheck, AlertCircle, Phone, MapPin, Check, X } from "lucide-react";
-import { CONTACT } from "@/lib/constants";
+import { ArrowLeft, ArrowRight, Cat, PawPrint, Stethoscope, Calendar, Shield, FileCheck, AlertCircle, CalendarClock, MapPin, Check, X } from "lucide-react";
+import { CALENDLY } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Santé chien & chat · ANSET Assurances",
@@ -48,10 +48,10 @@ export default function SanteChienChatPage() {
               Obtenir mon devis
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
-            <a href={CONTACT.phoneHref} className={ctaSecondaryCls}>
-              <Phone className="w-4 h-4" aria-hidden="true" />
+            <Link href={CALENDLY.sectionHref} className={ctaSecondaryCls}>
+              <CalendarClock className="w-4 h-4" aria-hidden="true" />
               Parler à un conseiller
-            </a>
+            </Link>
           </div>
           <p className="mt-6 text-xs text-anset-slate/70 font-medium">
             Dès 12€/mois · Risque porté par Groupama Protection Juridique
@@ -471,10 +471,10 @@ export default function SanteChienChatPage() {
               Démarrer mon devis
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
-            <a href={CONTACT.phoneHref} className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/30 text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-white/10 transition-colors">
-              <Phone className="w-4 h-4" aria-hidden="true" />
+            <Link href={CALENDLY.sectionHref} className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/30 text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-white/10 transition-colors">
+              <CalendarClock className="w-4 h-4" aria-hidden="true" />
               Parler à un conseiller
-            </a>
+            </Link>
           </div>
         </div>
       </section>

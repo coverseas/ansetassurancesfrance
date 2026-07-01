@@ -1,5 +1,6 @@
-import { CONTACT } from "@/lib/constants";
-import { ChevronDown, MessageCircle, Phone } from "lucide-react";
+import Link from "next/link";
+import { CONTACT, CALENDLY } from "@/lib/constants";
+import { ChevronDown, MessageCircle, CalendarClock } from "lucide-react";
 
 const FAQS = [
   {
@@ -8,7 +9,7 @@ const FAQS = [
   },
   {
     q: "Comment obtenir un devis ?",
-    a: "Sélectionnez ce que vous souhaitez assurer dans le sélecteur en haut de page pour démarrer votre devis en quelques minutes. Vous pouvez aussi écrire à Poé qui prépare votre demande et la transmet à un conseiller, ou nous appeler directement. Nous vous rappelons sous 2 heures ouvrées.",
+    a: "Sélectionnez ce que vous souhaitez assurer dans le sélecteur en haut de page pour démarrer votre devis en quelques minutes. Vous pouvez aussi écrire à Poé qui prépare votre demande et la transmet à un conseiller, ou prendre rendez-vous en ligne. Nous vous rappelons sous 2 heures ouvrées.",
   },
   {
     q: "Que peut faire Poé, exactement ?",
@@ -16,7 +17,7 @@ const FAQS = [
   },
   {
     q: "Que se passe-t-il en cas de sinistre ?",
-    a: "Vous nous contactez par téléphone, par email, ou via Poé qui transmet votre dossier à un conseiller dédié. Celui-ci prend votre dossier en main, vous explique les étapes, et vous tient au courant à chaque étape. Sur la santé animale, le remboursement tombe en moyenne en 48 heures après réception des justificatifs.",
+    a: "Vous nous contactez par email, en prenant rendez-vous en ligne, ou via Poé qui transmet votre dossier à un conseiller dédié. Celui-ci prend votre dossier en main, vous explique les étapes, et vous tient au courant à chaque étape. Sur la santé animale, le remboursement tombe en moyenne en 48 heures après réception des justificatifs.",
   },
   {
     q: "Qui porte les risques et avec qui suis-je en relation ?",
@@ -68,10 +69,10 @@ export function FaqSection() {
             Écrivez à Poé pour une réponse immédiate, ou parlez directement à un conseiller.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <a href={CONTACT.phoneHref} className={ctaPrimaryCls}>
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              {CONTACT.phoneDisplay}
-            </a>
+            <Link href={CALENDLY.sectionHref} className={ctaPrimaryCls}>
+              <CalendarClock className="w-4 h-4" aria-hidden="true" />
+              {CALENDLY.label}
+            </Link>
             <a href={`mailto:${CONTACT.email}`} className={ctaSecondaryCls}>
               <MessageCircle className="w-4 h-4" aria-hidden="true" />
               Nous écrire

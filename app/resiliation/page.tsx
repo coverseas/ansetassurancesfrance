@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck, FileText, Mail, Clock } from "lucide-react";
-import { CONTACT, COMPANY } from "@/lib/constants";
+import { CONTACT, COMPANY, CALENDLY } from "@/lib/constants";
 import ResiliationForm from "@/components/forms/ResiliationForm";
 
 export const metadata: Metadata = {
@@ -81,7 +81,7 @@ export default function ResiliationPage() {
             <ul className="space-y-2 text-sm text-anset-slate font-medium leading-relaxed list-disc list-inside marker:text-anset-lilas">
               <li><span className="font-bold text-anset-blue">Email :</span> <a href={CONTACT.emailHref} className="text-anset-lilas font-bold underline">{CONTACT.email}</a> en précisant votre numéro de contrat et votre identité</li>
               <li><span className="font-bold text-anset-blue">Courrier postal :</span> {COMPANY.legalName}, {COMPANY.address.street}, {COMPANY.address.zip} {COMPANY.address.city}</li>
-              <li><span className="font-bold text-anset-blue">Téléphone :</span> <a href={CONTACT.phoneHref} className="text-anset-lilas font-bold">{CONTACT.phoneDisplay}</a> aux horaires d'ouverture</li>
+              <li><span className="font-bold text-anset-blue">Rendez-vous en ligne :</span> <a href={CALENDLY.sectionHref} className="text-anset-lilas font-bold">réservez un créneau avec un conseiller</a></li>
             </ul>
           </div>
         </div>

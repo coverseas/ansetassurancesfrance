@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
-import { CONTACT, COMPANY } from "@/lib/constants";
+import { ArrowLeft, ArrowRight, CalendarClock, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { CONTACT, COMPANY, CALENDLY } from "@/lib/constants";
 import ContactForm from "@/components/forms/ContactForm";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez ANSET Assurances par téléphone, email, ou via notre formulaire. Conseillers humains 6j/7, Poé l'IA 24h/24.",
+  description: "Contactez ANSET Assurances : prenez rendez-vous en ligne avec un conseiller, écrivez-nous par email ou via notre formulaire. Conseillers humains 6j/7, Poé l'IA 24h/24.",
 };
 
 export default function ContactPage() {
@@ -27,7 +28,7 @@ export default function ContactPage() {
             <span className="text-anset-lilas">Parlez-nous.</span>
           </h1>
           <p className="text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-2xl">
-            Téléphone, email, formulaire : choisissez le canal qui vous convient. Nos conseillers répondent 6 jours sur 7, et Poé prend le relais en dehors des horaires.
+            Rendez-vous en ligne, email, formulaire : choisissez le canal qui vous convient. Nos conseillers répondent 6 jours sur 7, et Poé prend le relais en dehors des horaires.
           </p>
         </div>
       </section>
@@ -35,17 +36,17 @@ export default function ContactPage() {
       <section className="py-14 md:py-18">
         <div className="container-anset max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <a href={CONTACT.phoneHref} className="bg-white rounded-2xl p-6 border border-anset-blue/10 shadow-premium-sm hover:border-anset-corail/40 hover:shadow-premium transition-all block group">
+            <Link href="#rendez-vous" className="bg-white rounded-2xl p-6 border border-anset-blue/10 shadow-premium-sm hover:border-anset-corail/40 hover:shadow-premium transition-all block group">
               <div className="w-12 h-12 bg-anset-corail-soft rounded-xl flex items-center justify-center mb-4">
-                <Phone className="w-5 h-5 text-anset-corail-dark" strokeWidth={1.8} aria-hidden="true" />
+                <CalendarClock className="w-5 h-5 text-anset-corail-dark" strokeWidth={1.8} aria-hidden="true" />
               </div>
-              <h3 className="text-lg font-black text-anset-blue tracking-tight mb-1 group-hover:text-anset-corail-dark transition-colors">Téléphone</h3>
-              <p className="text-xl font-black text-anset-blue tracking-tight mb-2">{CONTACT.phoneDisplay}</p>
+              <h3 className="text-lg font-black text-anset-blue tracking-tight mb-1 group-hover:text-anset-corail-dark transition-colors">Rendez-vous</h3>
+              <p className="text-xl font-black text-anset-blue tracking-tight mb-2">Réservez un créneau</p>
               <p className="text-xs text-anset-slate font-medium leading-relaxed">
-                Lundi-vendredi 9h-19h<br />
-                Samedi 9h-13h
+                Choisissez l'horaire qui vous convient,<br />
+                un conseiller vous rappelle.
               </p>
-            </a>
+            </Link>
 
             <a href={CONTACT.emailHref} className="bg-white rounded-2xl p-6 border border-anset-blue/10 shadow-premium-sm hover:border-anset-moutarde/40 hover:shadow-premium transition-all block group">
               <div className="w-12 h-12 bg-anset-moutarde-soft rounded-xl flex items-center justify-center mb-4">
@@ -74,7 +75,22 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-18 bg-anset-mist/30 border-y border-anset-blue/10">
+      <section id="rendez-vous" className="scroll-mt-24 py-14 md:py-18 bg-anset-mist/30 border-y border-anset-blue/10">
+        <div className="container-anset max-w-4xl">
+          <div className="mb-8">
+            <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-lilas mb-2">Prendre rendez-vous</p>
+            <h2 className="text-2xl md:text-3xl font-black text-anset-blue tracking-tight leading-[1.15] mb-3">
+              Choisissez votre créneau, <span className="text-anset-lilas">on vous rappelle</span>.
+            </h2>
+            <p className="text-base text-anset-slate leading-relaxed font-medium max-w-2xl">
+              Réservez un rendez-vous téléphonique avec un conseiller ANSET à l'horaire qui vous arrange. Vous recevez une confirmation par email avec tous les détails.
+            </p>
+          </div>
+          <CalendlyEmbed />
+        </div>
+      </section>
+
+      <section className="py-14 md:py-18">
         <div className="container-anset max-w-5xl">
           <div className="mb-8">
             <p className="text-[10px] md:text-xs font-black uppercase tracking-[2.5px] text-anset-lilas mb-2">Selon votre besoin</p>
@@ -179,10 +195,10 @@ export default function ContactPage() {
               Découvrir nos offres
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </Link>
-            <a href={CONTACT.phoneHref} className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/30 text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-white/10 transition-colors">
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              {CONTACT.phoneDisplay}
-            </a>
+            <Link href="#rendez-vous" className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/30 text-sm font-black px-6 py-3.5 rounded-2xl hover:bg-white/10 transition-colors">
+              <CalendarClock className="w-4 h-4" aria-hidden="true" />
+              {CALENDLY.label}
+            </Link>
           </div>
         </div>
       </section>

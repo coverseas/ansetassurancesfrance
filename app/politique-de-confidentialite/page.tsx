@@ -26,8 +26,7 @@ export default function PolitiqueConfidentialitePage() {
       </p>
       <p>
         Pour toute question relative au traitement de vos données :<br />
-        Email : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br />
-        Téléphone : <a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a>
+        Email : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
       </p>
 
       <h2>2. Données collectées</h2>

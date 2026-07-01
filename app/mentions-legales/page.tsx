@@ -79,8 +79,7 @@ export default function MentionsLegalesPage() {
         Pour toute question concernant ces mentions légales ou le site :
       </p>
       <p>
-        Email : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br />
-        Téléphone : <a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a>
+        Email : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
       </p>
 
     </LegalPageLayout>
