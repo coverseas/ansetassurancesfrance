@@ -12,7 +12,7 @@ export default function CookiesPage() {
     <LegalPageLayout
       title="Gestion des cookies"
       subtitle="Quels cookies nous utilisons et comment les gérer"
-      lastUpdated="21 mai 2026"
+      lastUpdated="2 juillet 2026"
     >
       <h2>Qu'est-ce qu'un cookie ?</h2>
       <p>
@@ -32,6 +32,11 @@ export default function CookiesPage() {
       <ul>
         <li>À ce jour, aucun cookie d'analyse n'est déployé. Cette section sera mise à jour lors de la mise en place d'un outil de mesure d'audience respectueux de la vie privée (Plausible, Matomo ou équivalent).</li>
       </ul>
+
+      <h3>Cookies de tiers — avis clients (Trustpilot)</h3>
+      <p>
+        Après une prise de contact ou une demande de devis, nous faisons appel à Trustpilot pour vous inviter à évaluer nos services. Le script Trustpilot peut déposer des cookies techniques permettant la gestion de ces invitations d'avis. Trustpilot A/S est établie au Danemark (Union européenne).
+      </p>
 
       <h3>Cookies marketing</h3>
       <p>Nous n'utilisons aucun cookie publicitaire ou de retargeting. Notre site est sans publicité.</p>

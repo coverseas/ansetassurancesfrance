@@ -12,7 +12,7 @@ export default function PolitiqueConfidentialitePage() {
     <LegalPageLayout
       title="Politique de confidentialité"
       subtitle="Comment nous protégeons vos données"
-      lastUpdated="21 mai 2026"
+      lastUpdated="2 juillet 2026"
     >
       <h2>1. Responsable de traitement</h2>
       <p>Le responsable du traitement de vos données personnelles est :</p>
@@ -47,6 +47,7 @@ export default function PolitiqueConfidentialitePage() {
         <li>Vous adresser, le cas échéant et avec votre consentement, des communications commerciales.</li>
         <li>Respecter nos obligations légales et réglementaires (notamment Lutte contre le Blanchiment et le Financement du Terrorisme).</li>
         <li>Mesurer la qualité de nos services et améliorer notre site.</li>
+        <li>Vous inviter, après une prise de contact ou une demande de devis, à évaluer nos services via notre partenaire d'avis clients Trustpilot. Vous pouvez vous opposer à tout moment à cette sollicitation.</li>
       </ul>
 
       <h2>4. Bases légales</h2>
@@ -64,6 +65,7 @@ export default function PolitiqueConfidentialitePage() {
         <li>À nos assureurs partenaires porteurs de risque : Groupama PJ, Mutuelle du Motard, Acheel, OCIRP, dans le cadre de l'instruction et de la gestion de vos contrats.</li>
         <li>À nos prestataires techniques (hébergement, outils de gestion), qui agissent en qualité de sous-traitants conformément à l'article 28 du RGPD.</li>
         <li>Aux autorités administratives ou judiciaires habilitées (ACPR, TRACFIN, justice) dans le cadre d'obligations légales.</li>
+        <li>À <strong>Trustpilot A/S</strong> (Danemark, Union européenne), notre plateforme d'avis clients, à laquelle nous transmettons votre nom et votre adresse email afin de vous inviter à évaluer nos services. Ce traitement repose sur notre intérêt légitime à recueillir des avis ; vous pouvez vous y opposer à tout moment.</li>
       </ul>
 
       <h2>6. Transferts hors Union européenne</h2>
