@@ -14,7 +14,7 @@ const data: ProductLandingData = {
   title: "Votre deux-roues assuré,",
   titleAccent: "particuliers et pros.",
   lead: "Moto, cyclo, scooter ou 50 cc : une assurance adaptée à votre machine et à votre usage, y compris pour les livreurs et les coursiers. Portée par le spécialiste historique du deux-roues.",
-  bientotHref: "/bientot?produit=moto",
+  bientotHref: "/devis?produit=moto",
   garantiesTitle: "Une couverture",
   garantiesAccent: "taillée pour la route.",
   garantiesIntro: "Des garanties modulables, de la responsabilité civile obligatoire jusqu'à la protection tous risques et l'équipement.",

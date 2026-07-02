@@ -84,10 +84,10 @@ export const HOSTING = {
 
 export const URLS = {
   souscriptionSanteAnimale: "/produits/sante-chien-chat#souscription",
-  souscriptionMoto: "/bientot?produit=moto",
-  souscriptionMotoPro: "/bientot?produit=moto-pro",
+  souscriptionMoto: "/devis?produit=moto",
+  souscriptionMotoPro: "/devis?produit=moto",
   souscriptionHabitation: "/bientot?produit=habitation",
-  souscriptionAuto: "/bientot?produit=auto",
+  souscriptionAuto: "/devis?produit=auto",
   souscriptionPNO: "/bientot?produit=pno",
   souscriptionSante: "/bientot?produit=sante",
   espaceClient: "/bientot?produit=espace-client",

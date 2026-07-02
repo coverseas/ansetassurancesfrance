@@ -14,7 +14,7 @@ const data: ProductLandingData = {
   title: "Votre voiture assurée,",
   titleAccent: "au juste prix.",
   lead: "Au tiers, tiers étendu ou tous risques : choisissez la formule adaptée à votre véhicule, à votre usage et à votre budget. Un tarif transparent et un conseiller qui vous guide.",
-  bientotHref: "/bientot?produit=auto",
+  bientotHref: "/devis?produit=auto",
   garantiesTitle: "Roulez",
   garantiesAccent: "l'esprit tranquille.",
   garantiesIntro: "Des garanties modulables, de la formule au tiers obligatoire jusqu'à la protection tous risques.",
