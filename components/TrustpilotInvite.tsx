@@ -15,7 +15,9 @@ import Script from "next/script";
  *     recipientEmail, recipientName, referenceId, source: 'InvitationScript',
  *   });
  */
-const TP_KEY = process.env.NEXT_PUBLIC_TRUSTPILOT_KEY;
+// Clé d'intégration AFS (clé publique côté client, visible dans la page).
+// Surchargée par l'env si défini, sinon valeur par défaut du compte ANSET.
+const TP_KEY = process.env.NEXT_PUBLIC_TRUSTPILOT_KEY ?? "ExuSxz6Zeom43KDo";
 const TP_TEMPLATE_ID = process.env.NEXT_PUBLIC_TRUSTPILOT_TEMPLATE_ID;
 
 declare global {

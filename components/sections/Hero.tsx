@@ -48,8 +48,16 @@ export function Hero() {
             <div className="flex items-center gap-2.5">
               <div className="bg-trustpilot text-white w-6 h-6 rounded flex items-center justify-center text-sm font-black leading-none">★</div>
               <div className="text-[12px] text-anset-slate leading-tight">
-                <span className="text-trustpilot text-[12px] tracking-wider block leading-none mb-0.5">★★★★★</span>
-                <strong className="text-anset-blue font-black">{TRUSTPILOT.rating}/5</strong> sur {TRUSTPILOT.name}
+                {TRUSTPILOT.rating ? (
+                  <>
+                    <span className="text-trustpilot text-[12px] tracking-wider block leading-none mb-0.5">★★★★★</span>
+                    <strong className="text-anset-blue font-black">{TRUSTPILOT.rating}/5</strong> sur {TRUSTPILOT.name}
+                  </>
+                ) : (
+                  <>
+                    <strong className="text-anset-blue font-black">Avis clients</strong><br />vérifiés sur {TRUSTPILOT.name}
+                  </>
+                )}
               </div>
             </div>
             <div className="flex items-center gap-2.5">
