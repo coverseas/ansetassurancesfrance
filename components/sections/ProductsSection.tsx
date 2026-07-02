@@ -1,4 +1,4 @@
-import { Cat, Bike, Car, Home, KeyRound, HeartPulse, Check, Zap, Clock } from "lucide-react";
+import { Cat, Bike, Car, Home, KeyRound, HeartPulse, Receipt, Check, Zap, Clock } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { LeafPattern } from "@/components/ui/LeafPattern";
@@ -11,6 +11,7 @@ const iconMap: Record<string, LucideIcon> = {
   home: Home,
   key: KeyRound,
   "heart-pulse": HeartPulse,
+  receipt: Receipt,
 };
 
 const productUrlMap: Record<string, string> = {
@@ -20,6 +21,7 @@ const productUrlMap: Record<string, string> = {
   habitation: URLS.souscriptionHabitation,
   pno: URLS.souscriptionPNO,
   sante: URLS.souscriptionSante,
+  "zen-facture": URLS.souscriptionZenFacture,
 };
 
 const colorThemes = {

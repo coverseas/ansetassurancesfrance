@@ -10,6 +10,7 @@ const inputCls = "w-full px-3.5 py-2.5 text-sm rounded-xl border border-anset-bl
 export const PRODUCT_OPTIONS = [
   { value: "auto", label: "Assurance auto" },
   { value: "moto", label: "Assurance moto, cyclo, scooter" },
+  { value: "zen-facture", label: "Zen Facture (protection de vos factures)" },
   { value: "autre", label: "Autre / plusieurs assurances" },
 ] as const;
 

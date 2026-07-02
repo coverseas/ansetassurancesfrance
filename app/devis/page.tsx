@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const PRODUCT_LABELS: Record<string, string> = {
   auto: "auto",
   moto: "moto, cyclo & scooter",
+  "zen-facture": "Zen Facture",
 };
 
 export default async function DevisPage({
@@ -20,7 +21,7 @@ export default async function DevisPage({
   searchParams: Promise<{ produit?: string }>;
 }) {
   const { produit } = await searchParams;
-  const key = produit === "moto" ? "moto" : produit === "auto" ? "auto" : "autre";
+  const key = produit && PRODUCT_LABELS[produit] ? produit : "autre";
   const productName = PRODUCT_LABELS[key];
 
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Cat, Bike, Home, Car, KeyRound, HeartPulse, ArrowRight } from "lucide-react";
+import { Cat, Bike, Home, Car, KeyRound, HeartPulse, Receipt, ArrowRight } from "lucide-react";
 import { URLS } from "@/lib/constants";
 
 const OPTIONS = [
@@ -40,6 +40,12 @@ const OPTIONS = [
     icon: HeartPulse,
     label: "Ma mutuelle santé",
     url: URLS.souscriptionSante,
+  },
+  {
+    slug: "zen-facture",
+    icon: Receipt,
+    label: "Mes factures (Zen Facture)",
+    url: URLS.souscriptionZenFacture,
   },
 ];
 

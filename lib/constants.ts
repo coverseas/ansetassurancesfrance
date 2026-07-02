@@ -88,6 +88,7 @@ export const URLS = {
   souscriptionMotoPro: "/devis?produit=moto",
   souscriptionHabitation: "/bientot?produit=habitation",
   souscriptionAuto: "/devis?produit=auto",
+  souscriptionZenFacture: "/devis?produit=zen-facture",
   souscriptionPNO: "/bientot?produit=pno",
   souscriptionSante: "/bientot?produit=sante",
   espaceClient: "/bientot?produit=espace-client",
@@ -107,6 +108,7 @@ export const TRUSTPILOT = {
 export const CATEGORY_COLORS = {
   biens: "moutarde", // Auto, habitation, PNO, moto, santé animale
   personne: "corail", // Santé / mutuelle individuelle
+  budget: "menthe", // Protection du budget / des revenus (Zen Facture)
   pro: "blue", // Offres professionnelles
   epargne: "menthe", // Épargne (vert)
   information: "lilas", // Information uniquement — pas un produit
@@ -226,6 +228,25 @@ export const PRODUCTS = [
     ],
     onlineSubscription: false,
     comingSoon: true,
+  },
+  {
+    slug: "zen-facture",
+    universe: "budget",
+    name: "Zen Facture",
+    shortName: "Zen Facture",
+    category: "MON BUDGET",
+    color: "menthe",
+    icon: "receipt",
+    porteurMention: "Risque porté par Acheel",
+    audience: "Particuliers",
+    description: "Vos factures du quotidien payées quand la vie déraille.",
+    features: [
+      "Énergie, téléphone, internet, eau, abonnements",
+      "Jusqu'à 600 € par sinistre, sans franchise",
+      "Accident de la vie ou licenciement économique",
+    ],
+    onlineSubscription: false,
+    comingSoon: false,
   },
 ] as const;
 
@@ -403,6 +424,7 @@ export const NAV_STRUCTURE: Array<{
       { label: "Assurance habitation", href: "/produits/habitation", description: "Avec Acheel" },
       { label: "Propriétaire non occupant (PNO)", href: "/produits/pno", description: "Avec Acheel" },
       { label: "Mutuelle santé", href: "/produits/sante", description: "Avec Acheel" },
+      { label: "Zen Facture", href: "/produits/zen-facture", description: "Vos factures protégées · Acheel" },
     ],
   },
   {
