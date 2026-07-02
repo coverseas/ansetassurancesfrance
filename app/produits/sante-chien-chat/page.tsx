@@ -6,7 +6,7 @@ import CoverseasSubscription from "@/components/CoverseasSubscription";
 
 export const metadata: Metadata = {
   title: "Santé chien & chat · ANSET Assurances",
-  description: "Assurance santé pour votre chien ou votre chat dès 12€/mois. Deux formules au choix (accident ou accident + maladie), avec ou sans franchise. Risque porté par Groupama PJ.",
+  description: "Assurance santé pour votre chien ou votre chat. Deux formules au choix (accident ou accident + maladie), avec ou sans franchise. Risque porté par Groupama PJ.",
 };
 
 const backLinkCls = "inline-flex items-center gap-1.5 text-[12px] font-bold text-anset-slate hover:text-anset-moutarde-dark transition-colors mb-8";
@@ -55,7 +55,7 @@ export default function SanteChienChatPage() {
             </Link>
           </div>
           <p className="mt-6 text-xs text-anset-slate/70 font-medium">
-            Dès 12€/mois · Risque porté par Groupama Protection Juridique
+            Souscription 100% en ligne · Risque porté par Groupama Protection Juridique
           </p>
         </div>
       </section>

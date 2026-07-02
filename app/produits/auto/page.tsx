@@ -40,8 +40,11 @@ const data: ProductLandingData = {
   porteurTitle: "Risque porté par Acheel.",
   porteurBody: "Le contrat est assuré par Acheel, société d'assurance française agréée et soumise au contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR).",
   ctaTitle: "Assurez votre voiture",
-  ctaAccent: "dès l'ouverture.",
-  ctaSubtitle: "Laissez-nous votre email pour être prévenu du lancement, ou prenez rendez-vous avec un conseiller.",
+  ctaAccent: "avec un conseiller.",
+  ctaSubtitle: "Obtenez votre devis avec un conseiller dédié, ou prenez rendez-vous à l'horaire qui vous convient.",
+  heroNote: "Avec conseiller dédié · Risque porté par Acheel",
+  ctaKicker: "Prêt à prendre la route ?",
+  finalCtaLabel: "Obtenir mon devis",
 };
 
 export default function AutoPage() {

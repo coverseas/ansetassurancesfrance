@@ -99,16 +99,6 @@ export function ProductsSection() {
                   <div className="relative z-10 bg-white w-20 h-20 rounded-full flex items-center justify-center shadow-premium-lg">
                     {Icon && <Icon className={`w-10 h-10 ${theme.iconColor}`} strokeWidth={1.5} aria-hidden="true" />}
                   </div>
-
-                  {!product.comingSoon && (
-                    <div className="absolute bottom-4 right-4 bg-white/97 px-3 py-2 rounded-lg flex items-baseline gap-0.5 z-10 shadow-premium-sm">
-                      <span className="text-[9px] text-anset-slate font-bold">dès</span>
-                      <span className="text-lg font-black text-anset-blue tracking-tight">
-                        {product.priceFrom}{product.priceCurrency}
-                      </span>
-                      <span className="text-[10px] text-anset-slate font-bold">{product.pricePeriod}</span>
-                    </div>
-                  )}
                 </div>
 
                 <div className="p-6 md:p-7 flex flex-col gap-3 flex-1">

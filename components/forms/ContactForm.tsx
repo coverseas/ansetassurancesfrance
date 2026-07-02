@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Loader2, Check, AlertCircle } from "lucide-react";
+import { sendTrustpilotInvitation } from "@/components/TrustpilotInvite";
 
 const labelCls = "block text-[11px] font-black uppercase tracking-[1.5px] text-anset-blue/70 mb-1.5";
 const inputCls = "w-full px-3.5 py-2.5 text-sm rounded-xl border border-anset-blue/15 bg-white focus:outline-none focus:border-anset-lilas focus:ring-2 focus:ring-anset-lilas/15 transition-colors font-medium text-anset-blue placeholder:text-anset-slate/50";
@@ -27,6 +28,22 @@ export default function ContactForm() {
       }
       setSuccess(true);
       formRef.current?.reset();
+
+      // Invitation Trustpilot — sauf pour une réclamation (on ne sollicite pas
+      // un avis public auprès d'un client mécontent).
+      const email = String(formData.get("email") ?? "").trim();
+      const subject = String(formData.get("subject") ?? "");
+      if (email && subject !== "reclamation") {
+        const name = [formData.get("firstName"), formData.get("lastName")]
+          .map((v) => String(v ?? "").trim())
+          .filter(Boolean)
+          .join(" ");
+        sendTrustpilotInvitation({
+          recipientEmail: email,
+          recipientName: name || "Client",
+          referenceId: `contact-${Date.now()}`,
+        });
+      }
     } catch (err) {
       setError("Connexion impossible. Vérifiez votre réseau et réessayez.");
     } finally {

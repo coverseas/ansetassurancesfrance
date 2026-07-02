@@ -44,7 +44,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <p className={colTitleCls}>La marque</p>
             <Link href="/notre-histoire" className={linkCls}>Notre histoire</Link>
-            <Link href="/comment-ca-marche" className={linkCls}>Comment ça marche</Link>
+            <Link href="/#comment-ca-marche" className={linkCls}>Comment ça marche</Link>
             <Link href="/#service" className={linkCls}>Notre service</Link>
             <Link href="/contact" className={linkCls}>Nous contacter</Link>
           </div>

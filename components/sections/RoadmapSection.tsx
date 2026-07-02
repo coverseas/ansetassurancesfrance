@@ -1,11 +1,10 @@
-import { Car, Home, ShieldPlus, Banknote } from "lucide-react";
+import { Home, ShieldPlus, Banknote } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ROADMAP } from "@/lib/constants";
 
 const iconMap: Record<string, LucideIcon> = {
   banknote: Banknote,
   "shield-plus": ShieldPlus,
-  car: Car,
   home: Home,
 };
 

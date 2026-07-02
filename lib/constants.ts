@@ -123,9 +123,6 @@ export const PRODUCTS = [
     icon: "cat",
     porteurMention: "Risque porté par Groupama PJ",
     audience: "Particuliers",
-    priceFrom: 12,
-    priceCurrency: "€",
-    pricePeriod: "/mois",
     description: "Pour votre compagnon, sans paperasse.",
     features: [
       "Consultations, vaccins, chirurgie",
@@ -145,9 +142,6 @@ export const PRODUCTS = [
     icon: "motorbike",
     porteurMention: "Risque porté par la Mutuelle du Motard",
     audience: "Particuliers & pros",
-    priceFrom: 18,
-    priceCurrency: "€",
-    pricePeriod: "/mois",
     description: "Particuliers ou pros, on s'occupe de tout.",
     features: [
       "Tous risques, RC, vol & équipement",
@@ -167,9 +161,6 @@ export const PRODUCTS = [
     icon: "car",
     porteurMention: "Risque porté par Acheel",
     audience: "Particuliers",
-    priceFrom: 0,
-    priceCurrency: "€",
-    pricePeriod: "/mois",
     description: "La bonne formule pour votre véhicule, au juste prix.",
     features: [
       "Au tiers, tiers + ou tous risques",
@@ -177,7 +168,7 @@ export const PRODUCTS = [
       "Assistance 0 km",
     ],
     onlineSubscription: false,
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     slug: "habitation",
@@ -189,9 +180,6 @@ export const PRODUCTS = [
     icon: "home",
     porteurMention: "Risque porté par Acheel",
     audience: "Particuliers",
-    priceFrom: 0,
-    priceCurrency: "€",
-    pricePeriod: "/mois",
     description: "Votre logement et vos biens, bien protégés.",
     features: [
       "Dégât des eaux, incendie, vol",
@@ -211,9 +199,6 @@ export const PRODUCTS = [
     icon: "key",
     porteurMention: "Risque porté par Acheel",
     audience: "Propriétaires bailleurs",
-    priceFrom: 0,
-    priceCurrency: "€",
-    pricePeriod: "/mois",
     description: "Votre bien loué protégé, même vide.",
     features: [
       "Pour propriétaires bailleurs",
@@ -233,9 +218,6 @@ export const PRODUCTS = [
     icon: "heart-pulse",
     porteurMention: "Risque porté par Acheel",
     audience: "Particuliers & familles",
-    priceFrom: 0,
-    priceCurrency: "€",
-    pricePeriod: "/mois",
     description: "Vous et votre famille, bien remboursés.",
     features: [
       "Soins, hospitalisation, optique, dentaire",
@@ -254,13 +236,6 @@ export const ROADMAP = [
     icon: "banknote",
     universe: "famille" as const,
     status: "Très bientôt",
-  },
-  {
-    slug: "auto",
-    name: "Assurance auto",
-    icon: "car",
-    universe: "biens" as const,
-    status: "Automne 2026",
   },
   {
     slug: "habitation",
@@ -355,7 +330,7 @@ export const SERVICE_PILLARS = {
       messages: [
         { from: "bot", text: "Bonjour, je suis Poé 👋 En quoi puis-je vous aider ?" },
         { from: "user", text: "Je voudrais assurer mon chien" },
-        { from: "bot", text: "Formule santé chien dès 12€/mois. Voulez-vous un devis ?" },
+        { from: "bot", text: "Nous avons une formule santé adaptée à votre chien. Je vous prépare un devis ?" },
         { from: "user", text: "Oui s'il vous plaît" },
         { from: "bot", text: "Je transmets à un conseiller qui vous rappelle sous 2h ☎" },
       ],
@@ -373,14 +348,14 @@ export const TESTIMONIALS = [
     featured: true,
   },
   {
-    quote: "Devis fait en 3 minutes, conseillère super sympa. Mon Léo est bien couvert et j'ai économisé 18€/mois.",
+    quote: "Devis fait en 3 minutes, conseillère super sympa. Mon Léo est bien couvert et j'ai fait de vraies économies.",
     name: "Sandrine R.",
     location: "Saint-Denis (93)",
     avatarTone: "light" as const,
     featured: false,
   },
   {
-    quote: "Assurance habitation et auto regroupées chez ANSET. Un seul interlocuteur qui connaît mon dossier, et un tarif plus juste qu'avant.",
+    quote: "Assurance auto et moto regroupées chez ANSET. Un seul interlocuteur qui connaît mon dossier, et un tarif plus juste qu'avant.",
     name: "Maeva K.",
     location: "Bobigny (93)",
     avatarTone: "warm" as const,
@@ -439,12 +414,12 @@ export const NAV_STRUCTURE: Array<{
       { label: "Résilier mon contrat", href: "/resiliation", description: "Procédure 3 clics" },
     ],
   },
-  { label: "Comment ça marche", href: "/comment-ca-marche" },
+  { label: "Comment ça marche", href: "/#comment-ca-marche" },
   { label: "Notre histoire", href: "/notre-histoire" },
 ];
 export const NAV_LINKS = [
   { label: "Nos offres", href: "/#offres" },
-  { label: "Comment ça marche", href: "/comment-ca-marche" },
+  { label: "Comment ça marche", href: "/#comment-ca-marche" },
   { label: "Le service ANSET", href: "/#service" },
   { label: "Notre histoire", href: "/notre-histoire" },
 ] as const;

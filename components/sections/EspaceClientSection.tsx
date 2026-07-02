@@ -62,9 +62,7 @@ export function EspaceClientSection() {
                 <div className="text-[9.5px] font-black text-anset-blue">Léo · Chat européen</div>
                 <div className="text-[8.5px] text-anset-slate font-semibold mt-0.5">Formule Confort · Actif</div>
               </div>
-              <div className="text-[11px] font-black text-anset-blue">
-                12€<span className="text-[8px] text-anset-slate font-bold">/mois</span>
-              </div>
+              <span className="text-[8px] font-black text-anset-menthe-dark bg-anset-menthe-soft px-2 py-1 rounded-full whitespace-nowrap">À jour</span>
             </div>
 
             <div className="flex items-center gap-2.5 py-2 border-b border-anset-blue/8">
@@ -75,9 +73,7 @@ export function EspaceClientSection() {
                 <div className="text-[9.5px] font-black text-anset-blue">Yamaha XSR 700</div>
                 <div className="text-[8.5px] text-anset-slate font-semibold mt-0.5">Tous risques · Actif</div>
               </div>
-              <div className="text-[11px] font-black text-anset-blue">
-                42€<span className="text-[8px] text-anset-slate font-bold">/mois</span>
-              </div>
+              <span className="text-[8px] font-black text-anset-menthe-dark bg-anset-menthe-soft px-2 py-1 rounded-full whitespace-nowrap">À jour</span>
             </div>
 
             <div className="flex items-center gap-2.5 pt-2">
@@ -88,9 +84,7 @@ export function EspaceClientSection() {
                 <div className="text-[9.5px] font-black text-anset-blue">Appartement · Nanterre</div>
                 <div className="text-[8.5px] text-anset-slate font-semibold mt-0.5">Multirisque habitation · Actif</div>
               </div>
-              <div className="text-[11px] font-black text-anset-blue">
-                18€<span className="text-[8px] text-anset-slate font-bold">/mois</span>
-              </div>
+              <span className="text-[8px] font-black text-anset-menthe-dark bg-anset-menthe-soft px-2 py-1 rounded-full whitespace-nowrap">À jour</span>
             </div>
           </div>
         </div>
