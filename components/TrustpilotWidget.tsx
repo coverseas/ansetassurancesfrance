@@ -2,13 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import Script from "next/script";
+import { TRUSTPILOT } from "@/lib/constants";
 
 /**
  * Widget TrustBox Trustpilot (avis réels).
- * Le Business Unit ID est fourni via NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID.
- * Tant qu'il n'est pas défini, le composant ne rend rien (repli géré par l'appelant).
+ * Le Business Unit ID vient de TRUSTPILOT.businessUnitId (défaut compte ANSET,
+ * surchargeable via NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID).
  */
-const BUSINESS_UNIT_ID = process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID;
+const BUSINESS_UNIT_ID = TRUSTPILOT.businessUnitId;
 
 // Templates TrustBox standards Trustpilot.
 const TEMPLATES = {
@@ -63,7 +64,7 @@ export function TrustpilotWidget({
         data-style-width="100%"
         data-theme={theme}
       >
-        <a href="https://fr.trustpilot.com" target="_blank" rel="noopener noreferrer">
+        <a href={TRUSTPILOT.reviewUrl} target="_blank" rel="noopener noreferrer">
           Voir nos avis sur Trustpilot
         </a>
       </div>

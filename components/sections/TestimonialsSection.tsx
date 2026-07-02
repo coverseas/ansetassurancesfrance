@@ -1,7 +1,7 @@
-import { TESTIMONIALS } from "@/lib/constants";
+import { TESTIMONIALS, TRUSTPILOT } from "@/lib/constants";
 import { TrustpilotWidget } from "@/components/TrustpilotWidget";
 
-const hasTrustpilot = !!process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID;
+const hasTrustpilot = !!TRUSTPILOT.businessUnitId;
 
 const avatarGradients: Record<string, string> = {
   light: "radial-gradient(circle at 40% 28%, #F5C6A8 0%, #D69873 45%, #9C5F3F 100%)",

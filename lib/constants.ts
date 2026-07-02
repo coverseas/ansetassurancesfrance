@@ -98,6 +98,9 @@ export const TRUSTPILOT = {
   rating: "",
   count: 0,
   name: "Trustpilot",
+  /** Business Unit ID (public) — active le widget d'avis. Surchargé par l'env si défini. */
+  businessUnitId: process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID ?? "6a45c702fe9077bc40e2128c",
+  reviewUrl: "https://fr.trustpilot.com/review/ansetassurances.com",
 } as const;
 
 /**
