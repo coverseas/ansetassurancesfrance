@@ -18,3 +18,5 @@ yarn-error.log*
 .env*.local
 .env
 .vercel
+# Documents internes (ne doivent pas être publiés)
+/private-docs/
