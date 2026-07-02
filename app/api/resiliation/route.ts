@@ -7,7 +7,7 @@ const BREVO_API_URL = "https://api.brevo.com/v3/smtp/email";
 const BREVO_API_KEY = process.env.BREVO_API_KEY;
 const FROM_EMAIL = process.env.BREVO_FROM_EMAIL ?? "";
 const FROM_NAME = process.env.BREVO_FROM_NAME ?? "ANSET Assurances";
-const RESILIATION_TO_EMAIL = process.env.ANSET_RESILIATION_TO ?? "resiliation@ansetassurances.com";
+const RESILIATION_TO_EMAIL = process.env.ANSET_RESILIATION_TO ?? "hello@ansetassurances.com";
 
 interface BrevoEmailPayload {
   sender: { name: string; email: string };

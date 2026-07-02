@@ -74,7 +74,7 @@ export function Chatbot() {
         copy[copy.length - 1] = {
           role: "assistant",
           content:
-            "Désolée, une erreur est survenue. Vous pouvez réessayer, écrire à contact@ansetassurances.com, ou prendre rendez-vous avec un conseiller.",
+            "Désolée, une erreur est survenue. Vous pouvez réessayer, écrire à hello@ansetassurances.com, ou prendre rendez-vous avec un conseiller.",
         };
         return copy;
       });
