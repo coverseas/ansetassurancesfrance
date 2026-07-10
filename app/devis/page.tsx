@@ -6,11 +6,10 @@ import DevisForm from "@/components/forms/DevisForm";
 
 export const metadata: Metadata = {
   title: "Demander un devis",
-  description: "Demandez votre devis d'assurance auto ou moto en quelques secondes, ou prenez rendez-vous avec un conseiller ANSET. Réponse rapide, accompagnement humain 6j/7.",
+  description: "Demandez votre devis d'assurance moto en quelques secondes, ou prenez rendez-vous avec un conseiller ANSET. Réponse rapide, accompagnement humain 6j/7.",
 };
 
 const PRODUCT_LABELS: Record<string, string> = {
-  auto: "auto",
   moto: "moto, cyclo & scooter",
   "zen-facture": "Zen Facture",
 };

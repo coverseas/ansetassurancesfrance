@@ -8,7 +8,6 @@ const labelCls = "block text-[11px] font-black uppercase tracking-[1.5px] text-a
 const inputCls = "w-full px-3.5 py-2.5 text-sm rounded-xl border border-anset-blue/15 bg-white focus:outline-none focus:border-anset-moutarde focus:ring-2 focus:ring-anset-moutarde/15 transition-colors font-medium text-anset-blue placeholder:text-anset-slate/50";
 
 export const PRODUCT_OPTIONS = [
-  { value: "auto", label: "Assurance auto" },
   { value: "moto", label: "Assurance moto, cyclo, scooter" },
   { value: "zen-facture", label: "Zen Facture (protection de vos factures)" },
   { value: "autre", label: "Autre / plusieurs assurances" },

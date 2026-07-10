@@ -14,7 +14,7 @@ const data: ProductLandingData = {
   title: "Votre voiture assurée,",
   titleAccent: "au juste prix.",
   lead: "Au tiers, tiers étendu ou tous risques : choisissez la formule adaptée à votre véhicule, à votre usage et à votre budget. Un tarif transparent et un conseiller qui vous guide.",
-  bientotHref: "/devis?produit=auto",
+  bientotHref: "/bientot?produit=auto",
   garantiesTitle: "Roulez",
   garantiesAccent: "l'esprit tranquille.",
   garantiesIntro: "Des garanties modulables, de la formule au tiers obligatoire jusqu'à la protection tous risques.",
@@ -40,11 +40,8 @@ const data: ProductLandingData = {
   porteurTitle: "Risque porté par Acheel.",
   porteurBody: "Le contrat est assuré par Acheel, société d'assurance française agréée et soumise au contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR).",
   ctaTitle: "Assurez votre voiture",
-  ctaAccent: "avec un conseiller.",
-  ctaSubtitle: "Obtenez votre devis avec un conseiller dédié, ou prenez rendez-vous à l'horaire qui vous convient.",
-  heroNote: "Avec conseiller dédié · Risque porté par Acheel",
-  ctaKicker: "Prêt à prendre la route ?",
-  finalCtaLabel: "Obtenir mon devis",
+  ctaAccent: "dès l'ouverture.",
+  ctaSubtitle: "Laissez-nous votre email pour être prévenu du lancement, ou prenez rendez-vous avec un conseiller.",
 };
 
 export default function AutoPage() {

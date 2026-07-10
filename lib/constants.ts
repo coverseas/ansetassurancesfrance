@@ -87,7 +87,7 @@ export const URLS = {
   souscriptionMoto: "/devis?produit=moto",
   souscriptionMotoPro: "/devis?produit=moto",
   souscriptionHabitation: "/bientot?produit=habitation",
-  souscriptionAuto: "/devis?produit=auto",
+  souscriptionAuto: "/bientot?produit=auto",
   souscriptionZenFacture: "/devis?produit=zen-facture",
   souscriptionPNO: "/bientot?produit=pno",
   souscriptionSante: "/bientot?produit=sante",
@@ -173,7 +173,7 @@ export const PRODUCTS = [
       "Assistance 0 km",
     ],
     onlineSubscription: false,
-    comingSoon: false,
+    comingSoon: true,
   },
   {
     slug: "habitation",
