@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, FileText, CalendarClock, Phone, Clock, ShieldCheck } from "lucide-react";
+import { ArrowLeft, FileText, CalendarClock, Clock, ShieldCheck } from "lucide-react";
 import { CONTACT, CALENDLY } from "@/lib/constants";
 import DevisForm from "@/components/forms/DevisForm";
 
@@ -101,8 +101,8 @@ export default async function DevisPage({
               <p className="text-xs text-anset-slate font-medium leading-relaxed">Réponse sous 24h ouvrées.</p>
             </div>
             <div className="flex items-start gap-2.5">
-              <Phone className="w-4 h-4 text-anset-menthe flex-shrink-0 mt-0.5" strokeWidth={2.2} aria-hidden="true" />
-              <p className="text-xs text-anset-slate font-medium leading-relaxed">Un conseiller dédié, {CONTACT.hours}.</p>
+              <CalendarClock className="w-4 h-4 text-anset-menthe flex-shrink-0 mt-0.5" strokeWidth={2.2} aria-hidden="true" />
+              <p className="text-xs text-anset-slate font-medium leading-relaxed">Un conseiller vous rappelle, {CONTACT.hours}.</p>
             </div>
           </div>
         </div>

@@ -89,6 +89,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true, reference }, { status: 200 });
   } catch (error) {
     console.error("[resiliation] error:", error);
-    return NextResponse.json({ error: "Erreur lors de l'envoi. Réessayez ou contactez-nous par téléphone." }, { status: 500 });
+    return NextResponse.json({ error: "Erreur lors de l'envoi. Réessayez ou contactez-nous par email." }, { status: 500 });
   }
 }
