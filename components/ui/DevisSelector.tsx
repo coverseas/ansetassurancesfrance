@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Cat, Bike, Home, Car, KeyRound, HeartPulse, Receipt, ArrowRight } from "lucide-react";
+import { Cat, Bike, Home, KeyRound, HeartPulse, Receipt, ArrowRight } from "lucide-react";
 import { URLS } from "@/lib/constants";
 
 const OPTIONS = [
@@ -22,12 +22,6 @@ const OPTIONS = [
     icon: Home,
     label: "Mon logement",
     url: URLS.souscriptionHabitation,
-  },
-  {
-    slug: "auto",
-    icon: Car,
-    label: "Ma voiture",
-    url: URLS.souscriptionAuto,
   },
   {
     slug: "pno",

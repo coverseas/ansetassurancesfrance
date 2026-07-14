@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Heart } from "lucide-react";
+import { ArrowLeft, Heart, Download, FileText, BookOpen } from "lucide-react";
 import SinistreForm from "@/components/forms/SinistreForm";
 
 export const metadata: Metadata = {
@@ -28,6 +28,45 @@ export default function SinistreSanteAnimalePage() {
           <p className="text-base md:text-lg text-anset-slate leading-relaxed font-medium max-w-2xl">
             Remplissez le formulaire ci-dessous avec vos pièces justificatives. Votre dossier sera transmis directement à Groupama Protection Juridique.
           </p>
+        </div>
+      </section>
+
+      <section className="py-10 md:py-14 bg-anset-mist/30 border-b border-anset-blue/10">
+        <div className="container-anset max-w-3xl">
+          <h2 className="text-lg md:text-xl font-black text-anset-blue tracking-tight mb-1.5">Documents utiles à télécharger</h2>
+          <p className="text-sm text-anset-slate font-medium leading-relaxed mb-5">
+            Le formulaire de prise en charge à remplir et le mode d'emploi pour vous faire rembourser vos soins.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a
+              href="/docs/Feuille%20de%20soins-102025-VDef.pdf"
+              download
+              className="group flex items-center gap-4 bg-white rounded-2xl p-4 md:p-5 border border-anset-blue/10 shadow-premium-sm hover:border-anset-moutarde-dark/40 hover:shadow-premium transition-all duration-200"
+            >
+              <div className="w-11 h-11 rounded-xl bg-anset-moutarde-soft flex items-center justify-center flex-shrink-0 text-anset-moutarde-dark">
+                <FileText className="w-5 h-5" strokeWidth={1.9} aria-hidden="true" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-black text-anset-blue tracking-tight leading-tight">Formulaire de prise en charge</p>
+                <p className="text-xs text-anset-slate font-medium mt-0.5">Feuille de soins à compléter · PDF</p>
+              </div>
+              <Download className="w-4 h-4 text-anset-slate group-hover:text-anset-moutarde-dark transition-colors flex-shrink-0" strokeWidth={2.2} aria-hidden="true" />
+            </a>
+            <a
+              href="/docs/Mode-emploi-comment%20se%20faire%20rembourser%20les%20soins-102025-VDef.pdf"
+              download
+              className="group flex items-center gap-4 bg-white rounded-2xl p-4 md:p-5 border border-anset-blue/10 shadow-premium-sm hover:border-anset-moutarde-dark/40 hover:shadow-premium transition-all duration-200"
+            >
+              <div className="w-11 h-11 rounded-xl bg-anset-moutarde-soft flex items-center justify-center flex-shrink-0 text-anset-moutarde-dark">
+                <BookOpen className="w-5 h-5" strokeWidth={1.9} aria-hidden="true" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-black text-anset-blue tracking-tight leading-tight">Tuto remboursement</p>
+                <p className="text-xs text-anset-slate font-medium mt-0.5">Comment se faire rembourser · PDF</p>
+              </div>
+              <Download className="w-4 h-4 text-anset-slate group-hover:text-anset-moutarde-dark transition-colors flex-shrink-0" strokeWidth={2.2} aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Cat, PawPrint, Stethoscope, Calendar, Shield, FileCheck, AlertCircle, CalendarClock, MapPin, Check, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Cat, PawPrint, Stethoscope, Calendar, Shield, FileCheck, AlertCircle, CalendarClock, MapPin, Check, X, Download, FileText, BookOpen } from "lucide-react";
 import { CALENDLY } from "@/lib/constants";
 import CoverseasSubscription from "@/components/CoverseasSubscription";
 
@@ -398,7 +398,7 @@ export default function SanteChienChatPage() {
               <div className="text-anset-moutarde-dark font-black text-4xl mb-3">01</div>
               <h3 className="text-base font-black text-anset-blue tracking-tight mb-2">Téléchargez la feuille de soins</h3>
               <p className="text-sm text-anset-slate font-medium leading-relaxed">
-                Disponible depuis votre espace client ou auprès de votre conseiller ANSET.
+                Directement ci-dessous, ou auprès de votre conseiller ANSET.
               </p>
             </div>
 
@@ -426,6 +426,38 @@ export default function SanteChienChatPage() {
               </p>
             </div>
 
+          </div>
+
+          {/* DOCUMENTS À TÉLÉCHARGER */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <a
+              href="/docs/Feuille%20de%20soins-102025-VDef.pdf"
+              download
+              className="group flex items-center gap-4 bg-white rounded-2xl p-4 md:p-5 border border-anset-blue/10 shadow-premium-sm hover:border-anset-moutarde-dark/40 hover:shadow-premium transition-all duration-200"
+            >
+              <div className="w-11 h-11 rounded-xl bg-anset-moutarde-soft flex items-center justify-center flex-shrink-0 text-anset-moutarde-dark">
+                <FileText className="w-5 h-5" strokeWidth={1.9} aria-hidden="true" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-black text-anset-blue tracking-tight leading-tight">Formulaire de prise en charge</p>
+                <p className="text-xs text-anset-slate font-medium mt-0.5">Feuille de soins à compléter · PDF</p>
+              </div>
+              <Download className="w-4 h-4 text-anset-slate group-hover:text-anset-moutarde-dark transition-colors flex-shrink-0" strokeWidth={2.2} aria-hidden="true" />
+            </a>
+            <a
+              href="/docs/Mode-emploi-comment%20se%20faire%20rembourser%20les%20soins-102025-VDef.pdf"
+              download
+              className="group flex items-center gap-4 bg-white rounded-2xl p-4 md:p-5 border border-anset-blue/10 shadow-premium-sm hover:border-anset-moutarde-dark/40 hover:shadow-premium transition-all duration-200"
+            >
+              <div className="w-11 h-11 rounded-xl bg-anset-moutarde-soft flex items-center justify-center flex-shrink-0 text-anset-moutarde-dark">
+                <BookOpen className="w-5 h-5" strokeWidth={1.9} aria-hidden="true" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-black text-anset-blue tracking-tight leading-tight">Tuto remboursement</p>
+                <p className="text-xs text-anset-slate font-medium mt-0.5">Comment se faire rembourser · PDF</p>
+              </div>
+              <Download className="w-4 h-4 text-anset-slate group-hover:text-anset-moutarde-dark transition-colors flex-shrink-0" strokeWidth={2.2} aria-hidden="true" />
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
